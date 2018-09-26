@@ -1,0 +1,68 @@
+@charset "UTF-8";
+@import "../common-page";
+@import "../import";
+body {
+    background: url(../Images/img-bg-1.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.main {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 2rem 0;
+}
+
+.login-content {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    color: #fff;
+    .input-group{
+        margin-bottom: 0.5rem;
+    }
+    a{
+        color: #fff;
+        text-decoration: none;
+        @include transition(0.4s all ease);
+        &:hover{
+            color: #0668d6;
+            opacity: 0.7;
+        }
+    }
+    @include border-radius(0.1875rem);
+    .page-title {
+        text-align: center;
+    }
+    .form-group{
+        margin-bottom: 1.7rem;
+    }
+    .btn-forgot {
+        padding-top: 0.5rem;
+        text-align: right;
+        a {
+            color: #fff;
+            &:hover {
+                text-decoration: none;
+                opacity: 0.7;
+            }
+        }
+    }
+    .btn-register {
+        background-color: rgba(36, 69, 108, 0.8);
+        border-color: rgba(7, 39, 82, 0.2);
+    }
+    .form-login{
+        .h2{
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .login-content {
+        padding: 2rem 1rem;
+    }
+}

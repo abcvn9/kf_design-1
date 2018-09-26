@@ -1,0 +1,72 @@
+.header-menu {
+    margin-right: auto;
+    position: relative;
+    top: 0.05rem;
+}
+
+.gnav-menu {
+    margin-right: auto;
+    >li {
+        display: inline-block;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-size: 1rem;
+
+        >a {
+            text-transform: uppercase;
+            font-weight: 500;
+            color: $gray-900;
+            @include transition(all 0.4s ease);
+            &:hover {
+                text-decoration: none;
+                color: $primary;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .gnav-menu {
+        >li {
+            padding-left: 0.9rem;
+            padding-right: 0.9rem;
+        }
+    }
+}
+
+@media (max-width: 811px) {
+    .header-menu {
+        top: 0.12rem;
+    }
+    .gnav-menu {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        >li {
+            font-size: 0.85rem;
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .header-menu {
+        margin-top: 0.5rem;
+        order: 3;
+        flex: 0 0 100%;
+        width: 100%;
+    }
+    .gnav-menu {
+        >li {
+            font-size: 0.75rem;
+        }
+    }
+}
+
+@media (max-width: 374px) {
+    .gnav-menu {
+        >li {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+    }
+}

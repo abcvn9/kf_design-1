@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Đăng ký</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <link rel="stylesheet" href="Styles/bootstrap.min.css">
+    <link rel="stylesheet" href="Styles/register.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-top">
+                <div class="container-fluid">
+                    <div class="header-top-wrap">
+                        <div class="btctm-top">
+                            <div> 24h Vol:</div>
+                            <div><span class="volumeBTC">14.89</span>BTC</div>
+                            <div><span class="volumeETH">540.77</span>ETH</div>
+                            <div><span class="volumeVND">5,533,003,750</span>VND</div>
+                            <div><span class="volumeKRW">0.00</span>KRW</div>
+                        </div>
+                        <div class="header-top-right">
+                            <button class="btn-theme" data-theme="dark-theme" data-show="default" tite="Switch to dark theme"><i class="far fa-moon"></i></button>
+                            <ul class="social-list">
+                                <li><a href="https://t.me/kfcoin" target="_blank"><i class="fab fa-telegram"></i></a></li>
+                                <li><a href="https://www.facebook.com/kfchangecom/"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://twitter.com/kfchange"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                            <div class="header-language">
+                                <div class="btn-group btn-language">
+                                    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-language="vn">
+                                        <img src="Images/Flag/vn.png" alt="Tiếng việt">
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="language/us" title="English"><img src="Images/Flag/us.png" alt="English"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-middle">
+                <div class="header-middle-inner">
+                    <div class="container-fluid">
+                        <nav class="navbar navbar-light">
+                            <div class="logo"><a><img src="Images/logo.png" alt="Kfchange"></a></div>
+                            <div class="header-menu">
+                                <ul class="gnav-menu">
+                                    <li><a href="/markets.html" title="Thị Trường"><span>Thị Trường</span></a></li>
+                                    <li class="nav-menu-balance"><a href="/balance.html" title="Ví Tiền"><span>Ví Tiền</span></a></li>
+                                    <li class="nav-menu-news"><a href="/news.html" title="Tin Tức"><span>Tin Tức</span></a></li>
+                                    <li><a href="http://support.kfchange.com" target="_blank" title="Hỗ trợ"><span>Hỗ Trợ</span></a></li>
+                                </ul>
+                            </div>
+                            <nav class="header-user">
+                                <ul class="user-list">
+                                    <li class="sign-in"><a href="login.html" class="btn-register"><i class="fas fa-user-lock"></i>Đăng nhập</a></li>
+                                    <li class="sign-up"><a href="register.html" class="btn-login"><i class="fas fa-user-plus"></i>Đăng ký</a></li>
+                                </ul>
+                            </nav>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!--/.header-middle-->
+        </header>
+        <main class="main full-content">
+            <div class="container-fluid">
+                <div class="main-wrap">
+                    <div class="main-content">
+                        <div class="register-content">
+                            <section>
+                                <h1 class="page-title text-uppercase">Đăng ký</h1>
+                                <p class="text-description">Bạn đã có tài khoản? <a href="/login.html">Đăng nhập</a></p>
+                                <form name="frmRegister" id="frmRegister" action="register.html" method="post">
+                                    <div class="row">
+                                        <div class="col-sm-6 order-sm-1">
+                                            <div class="form-group">
+                                                <label for="inputUsername" class="control-label">Tên đăng nhập</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text min-w-40 justify-content-center"><i class="fas fa-user"></i></span>
+                                                    </div>
+                                                    <input type="text" class="form-control" name="xUsername" placeholder="Tên đăng nhập">
+                                                    <div class="input-group-append">
+                                                        <div class="input-group-text min-w-35 p-0 justify-content-center"><a href="javascript:void(0)" id="checkUsername"><i class="fa fa-times text-danger"></i></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 order-sm-3">
+                                            <div class="form-group">
+                                                <label for="inputPassword" class="control-label">Mật Khẩu:</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text min-w-40 justify-content-center"><i class="fas fa-lock"></i></span>
+                                                    </div>
+                                                    <input type="password" placeholder="Mật khẩu" name="xPassword" value="" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 order-sm-5">
+                                            <div class="form-group">
+                                                <label for="inputPassword" class="control-label">Xác nhận mật Khẩu:</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text min-w-40 justify-content-center">
+                                                           <i class="fa fa-undo"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="password" placeholder="Xác nhận mật Khẩu" name="xPasswordConfirm" value="" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 order-sm-2">
+                                            <div class="form-group">
+                                                <label for="inputPassword" class="control-label">Họ Và Tên:</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text min-w-40 justify-content-center min-w-40 text-center"><i class="fas fa-address-card"></i></span>
+                                                    </div>
+                                                    <input type="text" placeholder="Họ và tên" name="xName" value="" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 order-sm-7">
+                                            <div class="form-group">
+                                                <label for="xPhone" class="control-label">Điện thoại:</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text min-w-40 justify-content-center pl-0 pr-0">+<span id="phoneCode">84</span></span>
+                                                    </div>
+                                                    <input type="tel" placeholder="Điện thoại" name="xPhone" value="" class="form-control" onblur="checkInformation(this);">
+                                                    <div class="input-group-append">
+                                                        <div class="input-group-text min-w-35 p-0"><a href="javascript:void(0)" id="checkPhone"></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 order-sm-4">
+                                            <div class="form-group">
+                                                <label for="inputEmail" class="control-label">Email:</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text min-w-40 justify-content-center"><i class="fas fa-at"></i></span>
+                                                    </div>
+                                                    <input type="email" placeholder="Nhập địa chỉ email vào đây" name="xEmail" value="" class="form-control" onblur="checkInformation(this);">
+                                                    <div class="input-group-append">
+                                                        <div class="input-group-text min-w-35 p-0 justify-content-center"><a href="javascript:void(0)" id="checkEmail"></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 order-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Quốc gia:</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text min-w-40 justify-content-center"><i class="fas fa-globe-americas"></i></span>
+                                                    </div>
+                                                    <select name="xCountry" class="form-control">
+                                                        <option value="AF" phone="93">+93 ( Afghanistan )</option>
+                                                        <option value="AL" phone="355">+355 ( Albania )</option>
+                                                        <option value="DZ" phone="213">+213 ( Algeria )</option>
+                                                        <option value="AS" phone="1684">+1684 ( American Samoa )</option>
+                                                        <option value="AD" phone="376">+376 ( Andorra )</option>
+                                                        <option value="AO" phone="244">+244 ( Angola )</option>
+                                                        <option value="AI" phone="1264">+1264 ( Anguilla )</option>
+                                                        <option value="AQ" phone="0">+0 ( Antarctica )</option>
+                                                        <option value="AG" phone="1268">+1268 ( Antigua and Barbuda )</option>
+                                                        <option value="AR" phone="54">+54 ( Argentina )</option>
+                                                        <option value="AM" phone="374">+374 ( Armenia )</option>
+                                                        <option value="AW" phone="297">+297 ( Aruba )</option>
+                                                        <option value="AU" phone="61">+61 ( Australia )</option>
+                                                        <option value="AT" phone="43">+43 ( Austria )</option>
+                                                        <option value="AZ" phone="994">+994 ( Azerbaijan )</option>
+                                                        <option value="BS" phone="1242">+1242 ( Bahamas )</option>
+                                                        <option value="BH" phone="973">+973 ( Bahrain )</option>
+                                                        <option value="BD" phone="880">+880 ( Bangladesh )</option>
+                                                        <option value="BB" phone="1246">+1246 ( Barbados )</option>
+                                                        <option value="BY" phone="375">+375 ( Belarus )</option>
+                                                        <option value="BE" phone="32">+32 ( Belgium )</option>
+                                                        <option value="BZ" phone="501">+501 ( Belize )</option>
+                                                        <option value="BJ" phone="229">+229 ( Benin )</option>
+                                                        <option value="BM" phone="1441">+1441 ( Bermuda )</option>
+                                                        <option value="BT" phone="975">+975 ( Bhutan )</option>
+                                                        <option value="BO" phone="591">+591 ( Bolivia )</option>
+                                                        <option value="BA" phone="387">+387 ( Bosnia and Herzegovina )</option>
+                                                        <option value="BW" phone="267">+267 ( Botswana )</option>
+                                                        <option value="BV" phone="0">+0 ( Bouvet Island )</option>
+                                                        <option value="BR" phone="55">+55 ( Brazil )</option>
+                                                        <option value="IO" phone="246">+246 ( British Indian Ocean Territory )</option>
+                                                        <option value="BN" phone="673">+673 ( Brunei Darussalam )</option>
+                                                        <option value="BG" phone="359">+359 ( Bulgaria )</option>
+                                                        <option value="BF" phone="226">+226 ( Burkina Faso )</option>
+                                                        <option value="BI" phone="257">+257 ( Burundi )</option>
+                                                        <option value="KH" phone="855">+855 ( Cambodia )</option>
+                                                        <option value="CM" phone="237">+237 ( Cameroon )</option>
+                                                        <option value="CA" phone="1">+1 ( Canada )</option>
+                                                        <option value="CV" phone="238">+238 ( Cape Verde )</option>
+                                                        <option value="KY" phone="1345">+1345 ( Cayman Islands )</option>
+                                                        <option value="CF" phone="236">+236 ( Central African Republic )</option>
+                                                        <option value="TD" phone="235">+235 ( Chad )</option>
+                                                        <option value="CL" phone="56">+56 ( Chile )</option>
+                                                        <option value="CN" phone="86">+86 ( China )</option>
+                                                        <option value="CX" phone="61">+61 ( Christmas Island )</option>
+                                                        <option value="CC" phone="672">+672 ( Cocos (Keeling) Islands )</option>
+                                                        <option value="CO" phone="57">+57 ( Colombia )</option>
+                                                        <option value="KM" phone="269">+269 ( Comoros )</option>
+                                                        <option value="CG" phone="242">+242 ( Congo )</option>
+                                                        <option value="CD" phone="242">+242 ( Congo, the Democratic Republic of the )</option>
+                                                        <option value="CK" phone="682">+682 ( Cook Islands )</option>
+                                                        <option value="CR" phone="506">+506 ( Costa Rica )</option>
+                                                        <option value="CI" phone="225">+225 ( Cote D'Ivoire )</option>
+                                                        <option value="HR" phone="385">+385 ( Croatia )</option>
+                                                        <option value="CU" phone="53">+53 ( Cuba )</option>
+                                                        <option value="CY" phone="357">+357 ( Cyprus )</option>
+                                                        <option value="CZ" phone="420">+420 ( Czech Republic )</option>
+                                                        <option value="DK" phone="45">+45 ( Denmark )</option>
+                                                        <option value="DJ" phone="253">+253 ( Djibouti )</option>
+                                                        <option value="DM" phone="1767">+1767 ( Dominica )</option>
+                                                        <option value="DO" phone="1809">+1809 ( Dominican Republic )</option>
+                                                        <option value="EC" phone="593">+593 ( Ecuador )</option>
+                                                        <option value="EG" phone="20">+20 ( Egypt )</option>
+                                                        <option value="SV" phone="503">+503 ( El Salvador )</option>
+                                                        <option value="GQ" phone="240">+240 ( Equatorial Guinea )</option>
+                                                        <option value="ER" phone="291">+291 ( Eritrea )</option>
+                                                        <option value="EE" phone="372">+372 ( Estonia )</option>
+                                                        <option value="ET" phone="251">+251 ( Ethiopia )</option>
+                                                        <option value="FK" phone="500">+500 ( Falkland Islands (Malvinas) )</option>
+                                                        <option value="FO" phone="298">+298 ( Faroe Islands )</option>
+                                                        <option value="FJ" phone="679">+679 ( Fiji )</option>
+                                                        <option value="FI" phone="358">+358 ( Finland )</option>
+                                                        <option value="FR" phone="33">+33 ( France )</option>
+                                                        <option value="GF" phone="594">+594 ( French Guiana )</option>
+                                                        <option value="PF" phone="689">+689 ( French Polynesia )</option>
+                                                        <option value="TF" phone="0">+0 ( French Southern Territories )</option>
+                                                        <option value="GA" phone="241">+241 ( Gabon )</option>
+                                                        <option value="GM" phone="220">+220 ( Gambia )</option>
+                                                        <option value="GE" phone="995">+995 ( Georgia )</option>
+                                                        <option value="DE" phone="49">+49 ( Germany )</option>
+                                                        <option value="GH" phone="233">+233 ( Ghana )</option>
+                                                        <option value="GI" phone="350">+350 ( Gibraltar )</option>
+                                                        <option value="GR" phone="30">+30 ( Greece )</option>
+                                                        <option value="GL" phone="299">+299 ( Greenland )</option>
+                                                        <option value="GD" phone="1473">+1473 ( Grenada )</option>
+                                                        <option value="GP" phone="590">+590 ( Guadeloupe )</option>
+                                                        <option value="GU" phone="1671">+1671 ( Guam )</option>
+                                                        <option value="GT" phone="502">+502 ( Guatemala )</option>
+                                                        <option value="GN" phone="224">+224 ( Guinea )</option>
+                                                        <option value="GW" phone="245">+245 ( Guinea-Bissau )</option>
+                                                        <option value="GY" phone="592">+592 ( Guyana )</option>
+                                                        <option value="HT" phone="509">+509 ( Haiti )</option>
+                                                        <option value="HM" phone="0">+0 ( Heard Island and Mcdonald Islands )</option>
+                                                        <option value="VA" phone="39">+39 ( Holy See (Vatican City State) )</option>
+                                                        <option value="HN" phone="504">+504 ( Honduras )</option>
+                                                        <option value="HK" phone="852">+852 ( Hong Kong )</option>
+                                                        <option value="HU" phone="36">+36 ( Hungary )</option>
+                                                        <option value="IS" phone="354">+354 ( Iceland )</option>
+                                                        <option value="IN" phone="91">+91 ( India )</option>
+                                                        <option value="ID" phone="62">+62 ( Indonesia )</option>
+                                                        <option value="IR" phone="98">+98 ( Iran, Islamic Republic of )</option>
+                                                        <option value="IQ" phone="964">+964 ( Iraq )</option>
+                                                        <option value="IE" phone="353">+353 ( Ireland )</option>
+                                                        <option value="IL" phone="972">+972 ( Israel )</option>
+                                                        <option value="IT" phone="39">+39 ( Italy )</option>
+                                                        <option value="JM" phone="1876">+1876 ( Jamaica )</option>
+                                                        <option value="JP" phone="81">+81 ( Japan )</option>
+                                                        <option value="JO" phone="962">+962 ( Jordan )</option>
+                                                        <option value="KZ" phone="7">+7 ( Kazakhstan )</option>
+                                                        <option value="KE" phone="254">+254 ( Kenya )</option>
+                                                        <option value="KI" phone="686">+686 ( Kiribati )</option>
+                                                        <option value="KP" phone="850">+850 ( Korea, Democratic People's Republic of )</option>
+                                                        <option value="KR" phone="82">+82 ( Korea, Republic of )</option>
+                                                        <option value="KW" phone="965">+965 ( Kuwait )</option>
+                                                        <option value="KG" phone="996">+996 ( Kyrgyzstan )</option>
+                                                        <option value="LA" phone="856">+856 ( Lao People's Democratic Republic )</option>
+                                                        <option value="LV" phone="371">+371 ( Latvia )</option>
+                                                        <option value="LB" phone="961">+961 ( Lebanon )</option>
+                                                        <option value="LS" phone="266">+266 ( Lesotho )</option>
+                                                        <option value="LR" phone="231">+231 ( Liberia )</option>
+                                                        <option value="LY" phone="218">+218 ( Libyan Arab Jamahiriya )</option>
+                                                        <option value="LI" phone="423">+423 ( Liechtenstein )</option>
+                                                        <option value="LT" phone="370">+370 ( Lithuania )</option>
+                                                        <option value="LU" phone="352">+352 ( Luxembourg )</option>
+                                                        <option value="MO" phone="853">+853 ( Macao )</option>
+                                                        <option value="MK" phone="389">+389 ( Macedonia, the Former Yugoslav Republic of )</option>
+                                                        <option value="MG" phone="261">+261 ( Madagascar )</option>
+                                                        <option value="MW" phone="265">+265 ( Malawi )</option>
+                                                        <option value="MY" phone="60">+60 ( Malaysia )</option>
+                                                        <option value="MV" phone="960">+960 ( Maldives )</option>
+                                                        <option value="ML" phone="223">+223 ( Mali )</option>
+                                                        <option value="MT" phone="356">+356 ( Malta )</option>
+                                                        <option value="MH" phone="692">+692 ( Marshall Islands )</option>
+                                                        <option value="MQ" phone="596">+596 ( Martinique )</option>
+                                                        <option value="MR" phone="222">+222 ( Mauritania )</option>
+                                                        <option value="MU" phone="230">+230 ( Mauritius )</option>
+                                                        <option value="YT" phone="269">+269 ( Mayotte )</option>
+                                                        <option value="MX" phone="52">+52 ( Mexico )</option>
+                                                        <option value="FM" phone="691">+691 ( Micronesia, Federated States of )</option>
+                                                        <option value="MD" phone="373">+373 ( Moldova, Republic of )</option>
+                                                        <option value="MC" phone="377">+377 ( Monaco )</option>
+                                                        <option value="MN" phone="976">+976 ( Mongolia )</option>
+                                                        <option value="MS" phone="1664">+1664 ( Montserrat )</option>
+                                                        <option value="MA" phone="212">+212 ( Morocco )</option>
+                                                        <option value="MZ" phone="258">+258 ( Mozambique )</option>
+                                                        <option value="MM" phone="95">+95 ( Myanmar )</option>
+                                                        <option value="NA" phone="264">+264 ( Namibia )</option>
+                                                        <option value="NR" phone="674">+674 ( Nauru )</option>
+                                                        <option value="NP" phone="977">+977 ( Nepal )</option>
+                                                        <option value="NL" phone="31">+31 ( Netherlands )</option>
+                                                        <option value="AN" phone="599">+599 ( Netherlands Antilles )</option>
+                                                        <option value="NC" phone="687">+687 ( New Caledonia )</option>
+                                                        <option value="NZ" phone="64">+64 ( New Zealand )</option>
+                                                        <option value="NI" phone="505">+505 ( Nicaragua )</option>
+                                                        <option value="NE" phone="227">+227 ( Niger )</option>
+                                                        <option value="NG" phone="234">+234 ( Nigeria )</option>
+                                                        <option value="NU" phone="683">+683 ( Niue )</option>
+                                                        <option value="NF" phone="672">+672 ( Norfolk Island )</option>
+                                                        <option value="MP" phone="1670">+1670 ( Northern Mariana Islands )</option>
+                                                        <option value="NO" phone="47">+47 ( Norway )</option>
+                                                        <option value="OM" phone="968">+968 ( Oman )</option>
+                                                        <option value="PK" phone="92">+92 ( Pakistan )</option>
+                                                        <option value="PW" phone="680">+680 ( Palau )</option>
+                                                        <option value="PS" phone="970">+970 ( Palestinian Territory, Occupied )</option>
+                                                        <option value="PA" phone="507">+507 ( Panama )</option>
+                                                        <option value="PG" phone="675">+675 ( Papua New Guinea )</option>
+                                                        <option value="PY" phone="595">+595 ( Paraguay )</option>
+                                                        <option value="PE" phone="51">+51 ( Peru )</option>
+                                                        <option value="PH" phone="63">+63 ( Philippines )</option>
+                                                        <option value="PN" phone="0">+0 ( Pitcairn )</option>
+                                                        <option value="PL" phone="48">+48 ( Poland )</option>
+                                                        <option value="PT" phone="351">+351 ( Portugal )</option>
+                                                        <option value="PR" phone="1787">+1787 ( Puerto Rico )</option>
+                                                        <option value="QA" phone="974">+974 ( Qatar )</option>
+                                                        <option value="RE" phone="262">+262 ( Reunion )</option>
+                                                        <option value="RO" phone="40">+40 ( Romania )</option>
+                                                        <option value="RU" phone="70">+70 ( Russian Federation )</option>
+                                                        <option value="RW" phone="250">+250 ( Rwanda )</option>
+                                                        <option value="SH" phone="290">+290 ( Saint Helena )</option>
+                                                        <option value="KN" phone="1869">+1869 ( Saint Kitts and Nevis )</option>
+                                                        <option value="LC" phone="1758">+1758 ( Saint Lucia )</option>
+                                                        <option value="PM" phone="508">+508 ( Saint Pierre and Miquelon )</option>
+                                                        <option value="VC" phone="1784">+1784 ( Saint Vincent and the Grenadines )</option>
+                                                        <option value="WS" phone="684">+684 ( Samoa )</option>
+                                                        <option value="SM" phone="378">+378 ( San Marino )</option>
+                                                        <option value="ST" phone="239">+239 ( Sao Tome and Principe )</option>
+                                                        <option value="SA" phone="966">+966 ( Saudi Arabia )</option>
+                                                        <option value="SN" phone="221">+221 ( Senegal )</option>
+                                                        <option value="CS" phone="381">+381 ( Serbia and Montenegro )</option>
+                                                        <option value="SC" phone="248">+248 ( Seychelles )</option>
+                                                        <option value="SL" phone="232">+232 ( Sierra Leone )</option>
+                                                        <option value="SG" phone="65">+65 ( Singapore )</option>
+                                                        <option value="SK" phone="421">+421 ( Slovakia )</option>
+                                                        <option value="SI" phone="386">+386 ( Slovenia )</option>
+                                                        <option value="SB" phone="677">+677 ( Solomon Islands )</option>
+                                                        <option value="SO" phone="252">+252 ( Somalia )</option>
+                                                        <option value="ZA" phone="27">+27 ( South Africa )</option>
+                                                        <option value="GS" phone="0">+0 ( South Georgia and the South Sandwich Islands )</option>
+                                                        <option value="ES" phone="34">+34 ( Spain )</option>
+                                                        <option value="LK" phone="94">+94 ( Sri Lanka )</option>
+                                                        <option value="SD" phone="249">+249 ( Sudan )</option>
+                                                        <option value="SR" phone="597">+597 ( Suriname )</option>
+                                                        <option value="SJ" phone="47">+47 ( Svalbard and Jan Mayen )</option>
+                                                        <option value="SZ" phone="268">+268 ( Swaziland )</option>
+                                                        <option value="SE" phone="46">+46 ( Sweden )</option>
+                                                        <option value="CH" phone="41">+41 ( Switzerland )</option>
+                                                        <option value="SY" phone="963">+963 ( Syrian Arab Republic )</option>
+                                                        <option value="TW" phone="886">+886 ( Taiwan, Province of China )</option>
+                                                        <option value="TJ" phone="992">+992 ( Tajikistan )</option>
+                                                        <option value="TZ" phone="255">+255 ( Tanzania, United Republic of )</option>
+                                                        <option value="TH" phone="66">+66 ( Thailand )</option>
+                                                        <option value="TL" phone="670">+670 ( Timor-Leste )</option>
+                                                        <option value="TG" phone="228">+228 ( Togo )</option>
+                                                        <option value="TK" phone="690">+690 ( Tokelau )</option>
+                                                        <option value="TO" phone="676">+676 ( Tonga )</option>
+                                                        <option value="TT" phone="1868">+1868 ( Trinidad and Tobago )</option>
+                                                        <option value="TN" phone="216">+216 ( Tunisia )</option>
+                                                        <option value="TR" phone="90">+90 ( Turkey )</option>
+                                                        <option value="TM" phone="7370">+7370 ( Turkmenistan )</option>
+                                                        <option value="TC" phone="1649">+1649 ( Turks and Caicos Islands )</option>
+                                                        <option value="TV" phone="688">+688 ( Tuvalu )</option>
+                                                        <option value="UG" phone="256">+256 ( Uganda )</option>
+                                                        <option value="UA" phone="380">+380 ( Ukraine )</option>
+                                                        <option value="AE" phone="971">+971 ( United Arab Emirates )</option>
+                                                        <option value="GB" phone="44">+44 ( United Kingdom )</option>
+                                                        <option value="US" phone="1">+1 ( United States )</option>
+                                                        <option value="UM" phone="1">+1 ( United States Minor Outlying Islands )</option>
+                                                        <option value="UY" phone="598">+598 ( Uruguay )</option>
+                                                        <option value="UZ" phone="998">+998 ( Uzbekistan )</option>
+                                                        <option value="VU" phone="678">+678 ( Vanuatu )</option>
+                                                        <option value="VE" phone="58">+58 ( Venezuela )</option>
+                                                        <option value="VN" phone="84" selected>+84 ( Viet Nam )</option>
+                                                        <option value="VG" phone="1284">+1284 ( Virgin Islands, British )</option>
+                                                        <option value="VI" phone="1340">+1340 ( Virgin Islands, U.s. )</option>
+                                                        <option value="WF" phone="681">+681 ( Wallis and Futuna )</option>
+                                                        <option value="EH" phone="212">+212 ( Western Sahara )</option>
+                                                        <option value="YE" phone="967">+967 ( Yemen )</option>
+                                                        <option value="ZM" phone="260">+260 ( Zambia )</option>
+                                                        <option value="ZW" phone="263">+263 ( Zimbabwe )</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 order-sm-8">
+                                            <div class="form-group">
+                                                <label for="inputCaptcha" class="control-label">Captcha</label>
+                                                <div class="input-group">
+                                                    <input type="number" name="xCaptcha" value="" class="form-control" placeholder="Nhập mã capcha bên phải phải vào đây" required>
+                                                    <div class="input-group-append">
+                                                        <div class="input-group-text"><img src="captcha.php"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <div class="check-accept-group form-group">
+                                        <div class="d-flex justify-content-center">
+                                            <div>
+                                                <label class="checkbox-custom">
+                                                    <input type="checkbox" name="xAgree" id="check-accept" value="YES"><span>Tôi đã đọc và đồng ý</span></label><a href="/custom/terms-of-service.html">Điều khoản dịch vụ.</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="max-w-200 ml-auto mr-auto">
+                                            <button type="submit" class="btn btn-block btn-primary">Đăng Ký</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="container-fluid">
+                    <div class="d-flex flex-wrap">
+                        <div>
+                            <nav class="footer-memu">
+                                <ul>
+                                    <li><a href="custom/about.html" title="Giới thiệu">Giới thiệu</a></li>
+                                    <li><a href="faq.html" title="Hỏi đáp">Hỏi đáp</a></li>
+                                    <li><a href="fees.html" title="Fee">Chi phí</a></li>
+                                    <li><a href="custom/contact.html" title="Contact Us">Liên hệ</a></li>
+                                    <li><a href="custom/api-document.html" title="Tài liệu API">Tài liệu API</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="ml-auto">
+                            <p>21-09-2018 18:37:48</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-middle">
+                <div class="container-fluid">
+                    <div class="d-flex flex-wrap">
+                        <div>
+                            <p><a href="//support.kfchange.com" title="Support 24/7">Support 24/7</a>
+                                <br> Company: TL INVESTMENT CREATIVE NEW ZEALAND LIMITED
+                                <br> NZBN: 9429046619075
+                                <br> Address: Standen Street, Karori, Wellington 6012, New Zealand</p>
+                        </div>
+                        <div class="ml-auto text-right">
+                            <p class="footer-app"><a href="#" title="Download on the app store"><img src="Images/btn_app_store.png" alt="Download on the app store"></a> <a href="#" title="Get it on google play"><img src="Images/btn_google_play.png" alt="Get it on google play"></a></p>
+                            <p>&copy; 2018 KFChange.com Inc. All Rights Reserved
+                                <br>All trading products offered through KFchange.com should be considered HIGH RISK.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="Javascripts/jquery-3.1.1.min.js"></script>
+    <script src="Javascripts/popper.min.js"></script>
+    <script src="Javascripts/bootstrap.js"></script>
+    <script src="Javascripts/kfchange.js"></script>
+    <script src="Javascripts/register.js"></script>
+</body>
+
+</html>

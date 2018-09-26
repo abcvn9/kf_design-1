@@ -1,0 +1,33 @@
+text/html
+<S-P-L-I-T-T-E-R>
+Xác nhận việc quên mật khẩu.
+<S-P-L-I-T-T-E-R>
+<div style="max-width: 680px; margin: 0 auto; border-left: 1px solid #2e669c; border-right: 1px solid #2e669c; padding: 0">
+  <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" bgcolor="white">
+    <tbody>
+      <tr>
+        <th align="center" scope="col" style="border-top: 1px solid #2e669c; padding: 20px 0 0 0;">
+          <img src="https://kfchange.com/Images/logo.png" alt="kfchange.com" />
+        </th>
+      </tr>
+      <tr>
+        <td align="left" valign="top" style="padding: 5px 10px;">
+          <p><strong><i>Xin chào [Name]!</i></strong></p>
+          <p><i>Chú ý</i>:<font color="#FF0000">
+            Nếu quý khách không yêu cầu cấp lại mật khẩu thì hãy bỏ qua thông điệp này. Tài khoản của quý khách sẽ bị đóng băng trong vòng 48 giờ sau khi thực hiện quy trình này.</font>
+          </p>
+          <p>
+              Quý khách vừa yêu cầu cấp lại mật khẩu đăng nhập tại https://kfchange.com, quý khách vui lòng <a href="https://kfchange.com/reset/[Index]/[Hash]" style="border-radius: 5px; background: #2e669c; color:#fff; padding: 8px 20px; display: inline-block; margin: 15px 0; text-decoration: none;">Bấm vào đây</a> để tiếp tục quy trình.
+          </p>
+          <br />
+        </td>
+      </tr>
+      <tr>
+        <td height="30" align="center" bgcolor="#2e669c" style="color:#858585; padding: 5px 10px;">
+          <font color="white" style="font-size:12px;">
+            Chú ý này là tự động từ hệ thống. Vui lòng không trả lời. Để nhận thông tin mới xin truy cập <a href="twitter.com/kfchange" target="_blank" style="color:#ffffff;">twitter.com/kfchange</a></font>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Đăng nhập</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <link rel="stylesheet" href="Styles/bootstrap.min.css">
+    <link rel="stylesheet" href="Styles/login.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-top">
+                <div class="container-fluid">
+                    <div class="header-top-wrap">
+                        <div class="btctm-top">
+                            <div> 24h Vol:</div>
+                            <div><span class="volumeBTC">14.89</span>BTC</div>
+                            <div><span class="volumeETH">540.77</span>ETH</div>
+                            <div><span class="volumeVND">5,533,003,750</span>VND</div>
+                            <div><span class="volumeKRW">0.00</span>KRW</div>
+                        </div>
+                        <div class="header-top-right">
+                            <button class="btn-theme" data-theme="dark-theme" data-show="default" tite="Switch to dark theme"><i class="far fa-moon"></i></button>
+                            <ul class="social-list">
+                                <li><a href="https://t.me/kfcoin" target="_blank"><i class="fab fa-telegram"></i></a></li>
+                                <li><a href="https://www.facebook.com/kfchangecom/"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://twitter.com/kfchange"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                            <div class="header-language">
+                                <div class="btn-group btn-language">
+                                    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-language="vn">
+                                        <img src="Images/Flag/vn.png" alt="Tiếng việt">
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="language/us" title="English"><img src="Images/Flag/us.png" alt="English"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-middle">
+                <div class="header-middle-inner">
+                    <div class="container-fluid">
+                        <nav class="navbar navbar-light">
+                            <div class="logo"><a><img src="Images/logo.png" alt="Kfchange"></a></div>
+                            <div class="header-menu">
+                                <ul class="gnav-menu">
+                                    <li><a href="/markets.html" title="Thị Trường"><span>Thị Trường</span></a></li>
+                                    <li class="nav-menu-balance"><a href="/balance.html" title="Ví Tiền"><span>Ví Tiền</span></a></li>
+                                    <li class="nav-menu-news"><a href="/news.html" title="Tin Tức"><span>Tin Tức</span></a></li>
+                                    <li><a href="http://support.kfchange.com" target="_blank" title="Hỗ trợ"><span>Hỗ Trợ</span></a></li>
+                                </ul>
+                            </div>
+                            <nav class="header-user">
+                                <ul class="user-list">
+                                    <li class="sign-in"><a href="login.html" class="btn-register"><i class="fas fa-user-lock"></i>Đăng nhập</a></li>
+                                    <li class="sign-up"><a href="register.html" class="btn-login"><i class="fas fa-user-plus"></i>Đăng ký</a></li>
+                                </ul>
+                            </nav>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!--/.header-middle-->
+        </header>
+        <main class="main full-content">
+            <div class="container-fluid">
+                <div class="main-wrap">
+                    <div class="main-content">
+                        <div class="login-content">
+                            <section>
+                                <h1 class="page-title text-uppercase">Đăng nhập vào tài khoản của bạn</h1>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 form-login">
+                                        <h2 class="h2">Đăng nhập</h2>
+                                        <form name="frmLogin" action="login.html" method="post">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                                    </div>
+                                                    <input type="text" name="xUsername" value="" class="form-control" placeholder="Tên đăng nhập">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                                    </div>
+                                                    <input type="password" name="xPassword" value="" class="form-control" placeholder="Mật khẩu">
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-block btn-primary fs-16 text-capitalize mt-4">Đăng nhập</button>
+                                            <p class="btn-forgot">
+                                                <a href="/forgot.html">Quên mật khẩu</a>
+                                            </p>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <h2 class="h2">Bạn chưa có tài khoản?</h2>
+                                        <p class="text-justify">KFchange.Com là một sàn giao dịch hỗ trợ chuyển đổi VNĐ tới BTC, ETH, ETC, LTC, USDT, ATLCOIN... Tại sàn giao dịch KFchange.Com, bạn có thể đăng ký một tài khoản sau đó sử dụng nó để trao đổi các loại tiền điện tử giữa người mua và người bán. Tất cả các giao dịch trên KFchange.Com diễn ra hoàn toàn tự động và bảo mật thông qua hình thức chuyển khoản ngân hàng. Chúng tôi cam kết sẽ đem lại sự hài lòng cho Quý khách hàng khi sử dụng dịch vụ. Mọi khó khăn hỏi đáp vui lòng liên hệ bộ phận hỗ trợ trực tuyến hoặc tạo câu hỏi tại đây (<a href="http://support.kfchange.com">http://support.kfchange.com</a>)</p>
+                                        <a href="" class="btn btn-block btn-primary fs-16 text-capitalize btn-register">Đăng ký</a>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="container-fluid">
+                    <div class="d-flex flex-wrap">
+                        <div>
+                            <nav class="footer-memu">
+                                <ul>
+                                    <li><a href="custom/about.html" title="Giới thiệu">Giới thiệu</a></li>
+                                    <li><a href="faq.html" title="Hỏi đáp">Hỏi đáp</a></li>
+                                    <li><a href="fees.html" title="Fee">Chi phí</a></li>
+                                    <li><a href="custom/contact.html" title="Contact Us">Liên hệ</a></li>
+                                    <li><a href="custom/api-document.html" title="Tài liệu API">Tài liệu API</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="ml-auto">
+                            <p>21-09-2018 18:37:48</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-middle">
+                <div class="container-fluid">
+                    <div class="d-flex flex-wrap">
+                        <div>
+                            <p><a href="//support.kfchange.com" title="Support 24/7">Support 24/7</a>
+                                <br> Company: TL INVESTMENT CREATIVE NEW ZEALAND LIMITED
+                                <br> NZBN: 9429046619075
+                                <br> Address: Standen Street, Karori, Wellington 6012, New Zealand</p>
+                        </div>
+                        <div class="ml-auto text-right">
+                            <p class="footer-app"><a href="#" title="Download on the app store"><img src="Images/btn_app_store.png" alt="Download on the app store"></a> <a href="#" title="Get it on google play"><img src="Images/btn_google_play.png" alt="Get it on google play"></a></p>
+                            <p>&copy; 2018 KFChange.com Inc. All Rights Reserved
+                                <br>All trading products offered through KFchange.com should be considered HIGH RISK.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="Javascripts/jquery-3.1.1.min.js"></script>
+    <script src="Javascripts/popper.min.js"></script>
+    <script src="Javascripts/bootstrap.js"></script>
+    <script src="Javascripts/kfchange.js"></script>
+</body>
+
+</html>
