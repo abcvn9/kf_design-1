@@ -2,6 +2,8 @@ sass --watch scss/bootstrap.scss:Styles/bootstrap.min.css --style compressed
 
 sass --watch scss/common.scss:Styles/common.css --style compressed
 
+sass --watch scss/pages/index.scss:Styles/pages/ndex.css --style compressed
+
 sass --watch scss/pages/login.scss:Styles/login.css --style compressed
 
 sass --watch scss/pages/register.scss:Styles/login.css --style compressed

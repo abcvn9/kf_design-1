@@ -1,22 +1,533 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<link rel="stylesheet" href="Styles/boostrap.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>KFChange.com | Thị Trường</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <link rel="stylesheet" href="Styles/bootstrap.min.css">
+    <link rel="stylesheet" href="Styles/index.css">
 </head>
+
 <body>
-	<div class="wrapper">
-		<header class="header">
-			
-		</header>
-		<main class="main full-content">
-			
-		</main>
-		<footer class="footer">
-			
-		</footer>
-	</div>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-top">
+                <div class="container-fluid">
+                    <div class="header-top-wrap">
+                        <div class="btctm-top">
+                            <div> 24h Vol:</div>
+                            <div><span class="volumeBTC">14.89</span>BTC</div>
+                            <div><span class="volumeETH">540.77</span>ETH</div>
+                            <div><span class="volumeVND">5,533,003,750</span>VND</div>
+                            <div><span class="volumeKRW">0.00</span>KRW</div>
+                        </div>
+                        <div class="header-top-right">
+                            <button class="btn-theme" data-theme="dark-theme" data-show="default" tite="Switch to dark theme"><i class="far fa-moon"></i></button>
+                            <ul class="social-list">
+                                <li><a href="https://t.me/kfcoin" target="_blank"><i class="fab fa-telegram"></i></a></li>
+                                <li><a href="https://www.facebook.com/kfchangecom/"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://twitter.com/kfchange"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                            <div class="header-language">
+                                <div class="btn-group btn-language">
+                                    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-language="vn">
+                                        <img src="Images/Flag/vn.png" alt="Tiếng việt">
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="language/us" title="English"><img src="Images/Flag/us.png" alt="English"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-middle">
+                <div class="header-middle-inner">
+                    <div class="container-fluid">
+                        <nav class="navbar navbar-light">
+                            <div class="logo"><a><img src="Images/logo.png" alt="Kfchange"></a></div>
+                            <div class="header-menu">
+                                <ul class="gnav-menu">
+                                    <li><a href="/markets.html" title="Thị Trường"><span>Thị Trường</span></a></li>
+                                    <li class="nav-menu-balance"><a href="/balance.html" title="Ví Tiền"><span>Ví Tiền</span></a></li>
+                                    <li class="nav-menu-news"><a href="/news.html" title="Tin Tức"><span>Tin Tức</span></a></li>
+                                    <li><a href="http://support.kfchange.com" target="_blank" title="Hỗ trợ"><span>Hỗ Trợ</span></a></li>
+                                </ul>
+                            </div>
+                            <nav class="header-user">
+                                <ul class="user-list">
+                                    <li class="sign-in"><a href="login.html" class="btn-register"><i class="fas fa-user-lock"></i>Đăng nhập</a></li>
+                                    <li class="sign-up"><a href="register.html" class="btn-login"><i class="fas fa-user-plus"></i>Đăng ký</a></li>
+                                </ul>
+                            </nav>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!--/.header-middle-->
+        </header>
+        <main class="main">
+            <div class="mainvisual">
+            </div>
+            <div class="container-fluid">
+                <div class="main-wrap">
+                    <div class="main-content">
+                        <div class="bitcoin-top">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6 col-lg-3">
+                                    <div class="bitcoin-top-item">
+                                        <dl>
+                                            <dt>BITCOIN/BTC</dt>
+                                            <dd>
+                                                <p class="bitcoin-top-price"><strong class="text-primary">0.1255252</strong><span>$9.58</span></p>
+                                                <p class="bitcoin-top-volume">Volume: 987.2652 BTC</p>
+                                            </dd>
+                                        </dl>
+                                        <div class="percent percent-primary">
+                                            12%
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-primary" role="progressbar" style="width: 12%;" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-3">
+                                    <div class="bitcoin-top-item">
+                                        <dl>
+                                            <dt class="text-uppercase">USDT/BTC</dt>
+                                            <dd>
+                                                <p class="bitcoin-top-price"><strong class="text-danger">0.1255252</strong><span>$0.58</span></p>
+                                                <p class="bitcoin-top-volume">Volume: 0.2652 BTC</p>
+                                            </dd>
+                                        </dl>
+                                        <div class="percent percent-danger">
+                                            -15%
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-primary" role="progressbar" style="width: -15%;" aria-valuenow="-15" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-3">
+                                    <div class="bitcoin-top-item">
+                                        <dl>
+                                            <dt class="text-uppercase">Korean Won/KRW</dt>
+                                            <dd>
+                                                <p class="bitcoin-top-price"><strong class="text-primary">0.1255252</strong><span>$9.58</span></p>
+                                                <p class="bitcoin-top-volume">Volume: 987.2652 BTC</p>
+                                            </dd>
+                                        </dl>
+                                        <div class="percent percent-primary">
+                                            12%
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-primary" role="progressbar" style="width: 12%;" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-3">
+                                    <div class="bitcoin-top-item">
+                                        <dl>
+                                            <dt>VNDM/BTC</dt>
+                                            <dd>
+                                                <p class="bitcoin-top-price"><strong class="text-danger">0.1255252</strong><span>$0.58</span></p>
+                                                <p class="bitcoin-top-volume">Volume: 0.2652 BTC</p>
+                                            </dd>
+                                        </dl>
+                                        <div class="percent percent-danger">
+                                            -15%
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-primary" role="progressbar" style="width: -15%;" aria-valuenow="-15" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/.bitcoin-top-->
+                        <div class="sec-market">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#btc" role="tab" data-toggle="tab">Bitcoin</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#usd" role="tab" data-toggle="tab">USDT</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#krw" role="tab" data-toggle="tab">KRW</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#vnd" role="tab" data-toggle="tab">VND</a>
+                                </li>
+                            </ul>
+                            <!-- Tabcontent -->
+                            <div class="tab-content">
+                                <input type="hidden" name="markets_search" id="markets_search" value="" />
+                                <div id="btc" class="tab-pane">
+                                    <div id="pbtc">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">MARKET</th>
+                                                    <th scope="col">24HR VOLUME</th>
+                                                    <th scope="col">% CHANGE</th>
+                                                    <th scope="col">LAST PRICE</th>
+                                                    <th scope="col">24HR HIGH</th>
+                                                    <th scope="col">24HR LOW</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row"><a href="market/BCH/BTC" target="_parent" title="BCH_BTC">BTC/BCH</a></th>
+                                                    <td><span class="volmkBCH-BTC">0</span> BCH</td>
+                                                    <td><span class="changemkBCH-BTC">0</span></td>
+                                                    <td><span class="lastmkBCH-BTC">0</span></td>
+                                                    <td><span class="highmkBCH-BTC">0</span></td>
+                                                    <td><span class="lowmkBCH-BTC">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/DASH/BTC" target="_parent" title="DASH_BTC">BTC/DASH</a></th>
+                                                    <td><span class="volmkDASH-BTC">0</span> DASH</td>
+                                                    <td><span class="changemkDASH-BTC">0</span></td>
+                                                    <td><span class="lastmkDASH-BTC">0</span></td>
+                                                    <td><span class="highmkDASH-BTC">0</span></td>
+                                                    <td><span class="lowmkDASH-BTC">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/DOGE/BTC" target="_parent" title="DOGE_BTC">BTC/DOGE</a></th>
+                                                    <td><span class="volmkDOGE-BTC">0</span> DOGE</td>
+                                                    <td><span class="changemkDOGE-BTC">0</span></td>
+                                                    <td><span class="lastmkDOGE-BTC">0</span></td>
+                                                    <td><span class="highmkDOGE-BTC">0</span></td>
+                                                    <td><span class="lowmkDOGE-BTC">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/EOS/BTC" target="_parent" title="EOS_BTC">BTC/EOS</a></th>
+                                                    <td><span class="volmkEOS-BTC">0</span> EOS</td>
+                                                    <td><span class="changemkEOS-BTC">0</span></td>
+                                                    <td><span class="lastmkEOS-BTC">0</span></td>
+                                                    <td><span class="highmkEOS-BTC">0</span></td>
+                                                    <td><span class="lowmkEOS-BTC">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/ETC/BTC" target="_parent" title="ETC_BTC">BTC/ETC</a></th>
+                                                    <td><span class="volmkETC-BTC">0</span> ETC</td>
+                                                    <td><span class="changemkETC-BTC">0</span></td>
+                                                    <td><span class="lastmkETC-BTC">0</span></td>
+                                                    <td><span class="highmkETC-BTC">0</span></td>
+                                                    <td><span class="lowmkETC-BTC">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/ETH/BTC" target="_parent" title="ETH_BTC">BTC/ETH</a></th>
+                                                    <td><span class="volmkETH-BTC">0</span> ETH</td>
+                                                    <td><span class="changemkETH-BTC">0</span></td>
+                                                    <td><span class="lastmkETH-BTC">0</span></td>
+                                                    <td><span class="highmkETH-BTC">0</span></td>
+                                                    <td><span class="lowmkETH-BTC">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/IOTA/BTC" target="_parent" title="IOTA_BTC">BTC/IOTA</a></th>
+                                                    <td><span class="volmkIOTA-BTC">0</span> IOTA</td>
+                                                    <td><span class="changemkIOTA-BTC">0</span></td>
+                                                    <td><span class="lastmkIOTA-BTC">0</span></td>
+                                                    <td><span class="highmkIOTA-BTC">0</span></td>
+                                                    <td><span class="lowmkIOTA-BTC">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/LTC/BTC" target="_parent" title="LTC_BTC">BTC/LTC</a></th>
+                                                    <td><span class="volmkLTC-BTC">0</span> LTC</td>
+                                                    <td><span class="changemkLTC-BTC">0</span></td>
+                                                    <td><span class="lastmkLTC-BTC">0</span></td>
+                                                    <td><span class="highmkLTC-BTC">0</span></td>
+                                                    <td><span class="lowmkLTC-BTC">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/NEO/BTC" target="_parent" title="NEO_BTC">BTC/NEO</a></th>
+                                                    <td><span class="volmkNEO-BTC">0</span> NEO</td>
+                                                    <td><span class="changemkNEO-BTC">0</span></td>
+                                                    <td><span class="lastmkNEO-BTC">0</span></td>
+                                                    <td><span class="highmkNEO-BTC">0</span></td>
+                                                    <td><span class="lowmkNEO-BTC">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/ROL/BTC" target="_parent" title="ROL_BTC">BTC/ROL</a></th>
+                                                    <td><span class="volmkROL-BTC">0</span> ROL</td>
+                                                    <td><span class="changemkROL-BTC">0</span></td>
+                                                    <td><span class="lastmkROL-BTC">0</span></td>
+                                                    <td><span class="highmkROL-BTC">0</span></td>
+                                                    <td><span class="lowmkROL-BTC">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/XRP/BTC" target="_parent" title="XRP_BTC">BTC/XRP</a></th>
+                                                    <td><span class="volmkXRP-BTC">0</span> XRP</td>
+                                                    <td><span class="changemkXRP-BTC">0</span></td>
+                                                    <td><span class="lastmkXRP-BTC">0</span></td>
+                                                    <td><span class="highmkXRP-BTC">0</span></td>
+                                                    <td><span class="lowmkXRP-BTC">0</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div id="krw" class="tab-pane fade">
+                                    <div id="pkrw">
+                                        <table class="table table-striped table-hover table-bordered table-markets">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">MARKET</th>
+                                                    <th scope="col">24HR VOLUME</th>
+                                                    <th scope="col">% CHANGE</th>
+                                                    <th scope="col">LAST PRICE</th>
+                                                    <th scope="col">24HR HIGH</th>
+                                                    <th scope="col">24HR LOW</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row"><a href="market/BCH/KRW" target="_parent" title="BCH_KRW">KRW/BCH</a></th>
+                                                    <td><span class="volmkBCH-KRW">0</span> BCH</td>
+                                                    <td><span class="changemkBCH-KRW">0</span></td>
+                                                    <td><span class="lastmkBCH-KRW">0</span></td>
+                                                    <td><span class="highmkBCH-KRW">0</span></td>
+                                                    <td><span class="lowmkBCH-KRW">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/BTC/KRW" target="_parent" title="BTC_KRW">KRW/BTC</a></th>
+                                                    <td><span class="volmkBTC-KRW">0</span> BTC</td>
+                                                    <td><span class="changemkBTC-KRW">0</span></td>
+                                                    <td><span class="lastmkBTC-KRW">0</span></td>
+                                                    <td><span class="highmkBTC-KRW">0</span></td>
+                                                    <td><span class="lowmkBTC-KRW">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/ETC/KRW" target="_parent" title="ETC_KRW">KRW/ETC</a></th>
+                                                    <td><span class="volmkETC-KRW">0</span> ETC</td>
+                                                    <td><span class="changemkETC-KRW">0</span></td>
+                                                    <td><span class="lastmkETC-KRW">0</span></td>
+                                                    <td><span class="highmkETC-KRW">0</span></td>
+                                                    <td><span class="lowmkETC-KRW">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/ETH/KRW" target="_parent" title="ETH_KRW">KRW/ETH</a></th>
+                                                    <td><span class="volmkETH-KRW">0</span> ETH</td>
+                                                    <td><span class="changemkETH-KRW">0</span></td>
+                                                    <td><span class="lastmkETH-KRW">0</span></td>
+                                                    <td><span class="highmkETH-KRW">0</span></td>
+                                                    <td><span class="lowmkETH-KRW">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/LTC/KRW" target="_parent" title="LTC_KRW">KRW/LTC</a></th>
+                                                    <td><span class="volmkLTC-KRW">0</span> LTC</td>
+                                                    <td><span class="changemkLTC-KRW">0</span></td>
+                                                    <td><span class="lastmkLTC-KRW">0</span></td>
+                                                    <td><span class="highmkLTC-KRW">0</span></td>
+                                                    <td><span class="lowmkLTC-KRW">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/USDT/KRW" target="_parent" title="USDT_KRW">KRW/USDT</a></th>
+                                                    <td><span class="volmkUSDT-KRW">0</span> USDT</td>
+                                                    <td><span class="changemkUSDT-KRW">0</span></td>
+                                                    <td><span class="lastmkUSDT-KRW">0</span></td>
+                                                    <td><span class="highmkUSDT-KRW">0</span></td>
+                                                    <td><span class="lowmkUSDT-KRW">0</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div id="usd" class="tab-pane fade">
+                                    <div id="pusd">
+                                        <table class="table table-striped table-hover table-bordered table-markets">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">MARKET</th>
+                                                    <th scope="col">24HR VOLUME</th>
+                                                    <th scope="col">% CHANGE</th>
+                                                    <th scope="col">LAST PRICE</th>
+                                                    <th scope="col">24HR HIGH</th>
+                                                    <th scope="col">24HR LOW</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row"><a href="market/BCH/USDT" target="_parent" title="BCH_USDT">USDT/BCH</a></th>
+                                                    <td><span class="volmkBCH-USDT">0</span> BCH</td>
+                                                    <td><span class="changemkBCH-USDT">0</span></td>
+                                                    <td><span class="lastmkBCH-USDT">0</span></td>
+                                                    <td><span class="highmkBCH-USDT">0</span></td>
+                                                    <td><span class="lowmkBCH-USDT">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/BTC/USDT" target="_parent" title="BTC_USDT">USDT/BTC</a></th>
+                                                    <td><span class="volmkBTC-USDT">0</span> BTC</td>
+                                                    <td><span class="changemkBTC-USDT">0</span></td>
+                                                    <td><span class="lastmkBTC-USDT">0</span></td>
+                                                    <td><span class="highmkBTC-USDT">0</span></td>
+                                                    <td><span class="lowmkBTC-USDT">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/ETC/USDT" target="_parent" title="ETC_USDT">USDT/ETC</a></th>
+                                                    <td><span class="volmkETC-USDT">0</span> ETC</td>
+                                                    <td><span class="changemkETC-USDT">0</span></td>
+                                                    <td><span class="lastmkETC-USDT">0</span></td>
+                                                    <td><span class="highmkETC-USDT">0</span></td>
+                                                    <td><span class="lowmkETC-USDT">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/ETH/USDT" target="_parent" title="ETH_USDT">USDT/ETH</a></th>
+                                                    <td><span class="volmkETH-USDT">0</span> ETH</td>
+                                                    <td><span class="changemkETH-USDT">0</span></td>
+                                                    <td><span class="lastmkETH-USDT">0</span></td>
+                                                    <td><span class="highmkETH-USDT">0</span></td>
+                                                    <td><span class="lowmkETH-USDT">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/LTC/USDT" target="_parent" title="LTC_USDT">USDT/LTC</a></th>
+                                                    <td><span class="volmkLTC-USDT">0</span> LTC</td>
+                                                    <td><span class="changemkLTC-USDT">0</span></td>
+                                                    <td><span class="lastmkLTC-USDT">0</span></td>
+                                                    <td><span class="highmkLTC-USDT">0</span></td>
+                                                    <td><span class="lowmkLTC-USDT">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/ROL/USDT" target="_parent" title="ROL_USDT">USDT/ROL</a></th>
+                                                    <td><span class="volmkROL-USDT">0</span> ROL</td>
+                                                    <td><span class="changemkROL-USDT">0</span></td>
+                                                    <td><span class="lastmkROL-USDT">0</span></td>
+                                                    <td><span class="highmkROL-USDT">0</span></td>
+                                                    <td><span class="lowmkROL-USDT">0</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div id="vnd" class="tab-pane active">
+                                    <div id="pvnd">
+                                        <table class="table table-striped table-hover table-bordered table-markets">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">MARKET</th>
+                                                    <th scope="col">24HR VOLUME</th>
+                                                    <th scope="col">% CHANGE</th>
+                                                    <th scope="col">LAST PRICE</th>
+                                                    <th scope="col">24HR HIGH</th>
+                                                    <th scope="col">24HR LOW</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row"><a href="market/BCH/VND" target="_parent" title="BCH_VND">VND/BCH</a></th>
+                                                    <td><span class="volmkBCH-VND">0</span> BCH</td>
+                                                    <td><span class="changemkBCH-VND">0</span></td>
+                                                    <td><span class="lastmkBCH-VND">0</span></td>
+                                                    <td><span class="highmkBCH-VND">0</span></td>
+                                                    <td><span class="lowmkBCH-VND">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/BTC/VND" target="_parent" title="BTC_VND">VND/BTC</a></th>
+                                                    <td><span class="volmkBTC-VND">0</span> BTC</td>
+                                                    <td><span class="changemkBTC-VND">0</span></td>
+                                                    <td><span class="lastmkBTC-VND">0</span></td>
+                                                    <td><span class="highmkBTC-VND">0</span></td>
+                                                    <td><span class="lowmkBTC-VND">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/ETC/VND" target="_parent" title="ETC_VND">VND/ETC</a></th>
+                                                    <td><span class="volmkETC-VND">0</span> ETC</td>
+                                                    <td><span class="changemkETC-VND">0</span></td>
+                                                    <td><span class="lastmkETC-VND">0</span></td>
+                                                    <td><span class="highmkETC-VND">0</span></td>
+                                                    <td><span class="lowmkETC-VND">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/ETH/VND" target="_parent" title="ETH_VND">VND/ETH</a></th>
+                                                    <td><span class="volmkETH-VND">0</span> ETH</td>
+                                                    <td><span class="changemkETH-VND">0</span></td>
+                                                    <td><span class="lastmkETH-VND">0</span></td>
+                                                    <td><span class="highmkETH-VND">0</span></td>
+                                                    <td><span class="lowmkETH-VND">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/LTC/VND" target="_parent" title="LTC_VND">VND/LTC</a></th>
+                                                    <td><span class="volmkLTC-VND">0</span> LTC</td>
+                                                    <td><span class="changemkLTC-VND">0</span></td>
+                                                    <td><span class="lastmkLTC-VND">0</span></td>
+                                                    <td><span class="highmkLTC-VND">0</span></td>
+                                                    <td><span class="lowmkLTC-VND">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/ROL/VND" target="_parent" title="ROL_VND">VND/ROL</a></th>
+                                                    <td><span class="volmkROL-VND">0</span> ROL</td>
+                                                    <td><span class="changemkROL-VND">0</span></td>
+                                                    <td><span class="lastmkROL-VND">0</span></td>
+                                                    <td><span class="highmkROL-VND">0</span></td>
+                                                    <td><span class="lowmkROL-VND">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="market/USDT/VND" target="_parent" title="USDT_VND">VND/USDT</a></th>
+                                                    <td><span class="volmkUSDT-VND">0</span> USDT</td>
+                                                    <td><span class="changemkUSDT-VND">0</span></td>
+                                                    <td><span class="lastmkUSDT-VND">0</span></td>
+                                                    <td><span class="highmkUSDT-VND">0</span></td>
+                                                    <td><span class="lowmkUSDT-VND">0</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tabcontent -->
+                        </div>
+                    </div>
+                </div>
+        </main>
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="container-fluid">
+                    <div class="d-flex flex-wrap">
+                        <div>
+                            <nav class="footer-memu">
+                                <ul>
+                                    <li><a href="custom/about.html" title="Giới thiệu">Giới thiệu</a></li>
+                                    <li><a href="faq.html" title="Hỏi đáp">Hỏi đáp</a></li>
+                                    <li><a href="fees.html" title="Fee">Chi phí</a></li>
+                                    <li><a href="custom/contact.html" title="Contact Us">Liên hệ</a></li>
+                                    <li><a href="custom/api-document.html" title="Tài liệu API">Tài liệu API</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="ml-auto">
+                            <p>21-09-2018 18:37:48</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-middle">
+                <div class="container-fluid">
+                    <div class="d-flex flex-wrap">
+                        <div>
+                            <p><a href="//support.kfchange.com" title="Support 24/7">Support 24/7</a>
+                                <br> Company: TL INVESTMENT CREATIVE NEW ZEALAND LIMITED
+                                <br> NZBN: 9429046619075
+                                <br> Address: Standen Street, Karori, Wellington 6012, New Zealand</p>
+                        </div>
+                        <div class="ml-auto text-right">
+                            <p class="footer-app"><a href="#" title="Download on the app store"><img src="Images/btn_app_store.png" alt="Download on the app store"></a> <a href="#" title="Get it on google play"><img src="Images/btn_google_play.png" alt="Get it on google play"></a></p>
+                            <p>&copy; 2018 KFChange.com Inc. All Rights Reserved
+                                <br>All trading products offered through KFchange.com should be considered HIGH RISK.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        </div>
+        <script src="Javascripts/jquery-3.1.1.min.js"></script>
+        <script src="Javascripts/popper.min.js"></script>
+        <script src="Javascripts/bootstrap.js"></script>
+        <script src="Javascripts/kfchange.js"></script>
 </body>
+
 </html>
