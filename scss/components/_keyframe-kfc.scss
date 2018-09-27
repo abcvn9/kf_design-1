@@ -1,0 +1,174 @@
+/*animated-circle */
+
+.animated-circle {
+    width: 280px;
+    height: 280px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    -webkit-transform: rotateX(60deg) rotateZ(-30deg);
+    transform: rotateX(60deg) rotateZ(-30deg);
+    -webkit-animation: rotate 20s infinite linear;
+    animation: rotate 20s infinite linear;
+}
+
+.animated-circle .circle {
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    border-radius: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.animated-circle .circle::before,
+.animated-circle .circle::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    background-size: 100% 100%;
+
+}
+
+.animated-circle .circle::before {
+    -webkit-transform: translateZ(-120px);
+    transform: translateZ(-120px);
+}
+
+.animated-circle .circle::after {
+    -webkit-transform: translateZ(120px);
+    transform: translateZ(120px);
+}
+
+.animated-circle .circle:nth-child(1) {
+    -webkit-transform: rotateZ(72deg) rotateX(63.435deg);
+    transform: rotateZ(72deg) rotateX(63.435deg);
+}
+
+.animated-circle .circle:nth-child(1)::after {
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
+    background-image: url(../Images/keyframe/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 197px;
+    height: 38px;
+}
+
+.animated-circle .circle:nth-child(1)::before {
+    background-image: url(../Images/keyframe/BCH.png);
+    background-repeat: no-repeat;
+    background-position: center;
+   
+}
+
+.animated-circle .circle:nth-child(2) {
+    -webkit-transform: rotateZ(144deg) rotateX(63.435deg);
+    transform: rotateZ(144deg) rotateX(63.435deg);
+}
+
+.animated-circle .circle:nth-child(2)::after {
+    background-image: url(../Images/keyframe/ETC.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.animated-circle .circle:nth-child(2)::before {
+    background-image: url(../Images/keyframe/ETH.png);
+    background-repeat: no-repeat;
+    background-position: center;
+   
+}
+
+.animated-circle .circle:nth-child(3) {
+    -webkit-transform: rotateZ(216deg) rotateX(63.435deg);
+    transform: rotateZ(216deg) rotateX(63.435deg);
+}
+
+.animated-circle .circle:nth-child(3)::after {
+    background-image: url(../Images/keyframe/LTC.png);
+    background-repeat: no-repeat;
+    background-position: center;
+   
+}
+
+.animated-circle .circle:nth-child(3)::before {
+    background-image: url(../Images/keyframe/USDT.png);
+    background-repeat: no-repeat;
+    background-position: center;
+   
+}
+
+.animated-circle .circle:nth-child(4) {
+    -webkit-transform: rotateZ(288deg) rotateX(63.435deg);
+    transform: rotateZ(288deg) rotateX(63.435deg);
+}
+
+.animated-circle .circle:nth-child(4)::after {
+    background-image: url(../Images/keyframe/BTC.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.animated-circle .circle:nth-child(4)::before {
+    background-image: url(../Images/keyframe/ETH.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.animated-circle .circle:nth-child(5) {
+    -webkit-transform: rotateZ(360deg) rotateX(63.435deg);
+    transform: rotateZ(360deg) rotateX(63.435deg);
+}
+
+.animated-circle .circle:nth-child(5)::after {
+    background-image: url(../Images/keyframe/LTC.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.animated-circle .circle:nth-child(5)::before {
+    background-image: url(../Images/keyframe/ETH.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotateX(0) rotateY(0) rotateZ(0);
+        transform: rotateX(0) rotateY(0) rotateZ(0);
+    }
+    100% {
+        -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotateX(0) rotateY(0) rotateZ(0);
+        transform: rotateX(0) rotateY(0) rotateZ(0);
+    }
+    100% {
+        -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+.animated-circle .circle {
+    -webkit-box-shadow: 0 0 40px #4776e6, inset 0 0 40px #fff;
+    box-shadow: 0 0 40px #4776e6, inset 0 0 40px #fff;
+}
