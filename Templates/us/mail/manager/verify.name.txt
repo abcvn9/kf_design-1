@@ -1,0 +1,33 @@
+﻿text/html
+<S-P-L-I-T-T-E-R>
+[Username] - Xác minh tên.
+<S-P-L-I-T-T-E-R>
+<div style="max-width: 680px; margin: 0 auto; border-left: 1px solid #2e669c; border-right: 1px solid #2e669c; padding: 0">
+  <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" bgcolor="white">
+    <tbody>
+      <tr>
+        <th align="center" scope="col" style="border-top: 1px solid #2e669c; padding: 20px 0 0 0;">
+          <img src="https://kfchange.com/Images/logo.png" alt="kfchange.com" />
+        </th>
+      </tr>
+      <tr>
+        <td align="left" valign="top" style="padding: 5px 10px;">
+          <p>
+            Khách hàng [Username] đã gửi thông tin để xác nhận tài khoản.
+          </p>
+          <ul type="square" style="margin:0; padding:0 0 0 15px;">
+            <li style="margin-bottom:10px;">Mã Khách Hàng: [Index]</li>
+            <li style="margin-bottom:10px;">Tên Truy Cập: [Username]</li>
+            <li>Họ Và Tên: [Name]</li>
+          </ul>
+          <br />
+        </td>
+      </tr>
+      <tr>
+        <td height="30" align="center" bgcolor="#2e669c" style="color:#858585; padding: 5px 10px;">
+          <font color="white" style="font-size:12px;"><strong>Cảm ơn quý khách đã sử dụng dịch vụ của chúng tôi!</strong></font>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

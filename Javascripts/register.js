@@ -1,15 +1,6 @@
 (function(){
     /***Check validate form***/
     (function(){
-        var errorMsg  = [];
-        errorMsg['xUsername'] ='<div class="invalid-feedback" style="display: inline-block;">Từ 6-20 ký tự, Viết thường không dấu, Không ký tự đặc biệt<br>Ví dụ: kfhcange123</div>';
-        errorMsg['xName'] = '<div class="invalid-feedback" style="display: inline-block;">Họ và tên viết không dấu, chỉ bao gồm chữ a-z<br>Ví dụ: NUYEN VAN A</div>';
-        errorMsg['xPassword'] = '<div class="invalid-feedback" style="display: inline-block;">Mật khẩu từ 8 ký tự trở lên, cả chữ và số<br> Ví dụ: kfchange123@</div>';
-        errorMsg['xPasswordConfirm'] = '<div class="invalid-feedback" style="display: inline-block;">Mật khẩu nhập lại không khớp</div>';
-        errorMsg['xPhone'] = '<div class="invalid-feedback" style="display: inline-block;">Số ĐT chỉ là số 1 -> 0 (lớn hon 9 và nhỏ 11 số)<br>Ví dụ: 09159555555 - 01237375555</div>';
-        errorMsg['xEmail'] = '<div class="invalid-feedback" style="display: inline-block;">Ví dụ: a@company.com, abc@gamil.com</div>';
-        errorMsg['xCaptcha'] = '<div class="invalid-feedback" style="display: inline-block;">Mã capcha không đúng</div>';
-        errorMsg['xAgree'] = '<div class="invalid-feedback" style="display: inline-block;">Chưa click vào tôi đã đồng ý điều khoản dịch vụ.</div>';
         var error = 0;
         function checkValidate(){
             var errorStatus = '';
@@ -94,9 +85,23 @@
             var regexUsername = /^([a-z0-9]).{6,19}$/;
             if(regexUsername.test(xusername)){
                 $(this).closest('.form-group').find('.invalid-feedback').remove();
+                    if($('#checkUsername').find('i').hasClass('text-danger')){
+                        $(this).closest('.form-group').find('.invalid-feedback').remove();
+                        $(this).closest('.form-group').append(errorMsg['xUsernameExist']);
+                    }else{
+                        $(this).closest('.form-group').find('.invalid-feedback').remove();
+                    }
             }else{
                 $(this).closest('.form-group').find('.invalid-feedback').remove();
                 $(this).closest('.form-group').append(errorMsg['xUsername']);
+            }
+        });
+        $(document).on('blur', 'input[name="xUsername"]',function(){
+            if($('#checkUsername').find('i').hasClass('text-danger')){
+                $(this).closest('.form-group').find('.invalid-feedback').remove();
+                $(this).closest('.form-group').append(errorMsg['xUsernameExist']);
+            }else{
+                $(this).closest('.form-group').find('.invalid-feedback').remove();
             }
         });
         $(document).on('keyup', 'input[name="xPassword"]',function(){
