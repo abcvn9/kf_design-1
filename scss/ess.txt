@@ -8,3 +8,6 @@ sass --watch scss/pages/index.scss:Styles/index.css --style compressed
 sass --watch scss/pages/login.scss:Styles/login.css --style compressed
 
 sass --watch scss/pages/register.scss:Styles/register.css --style compressed
+
+
+sass --watch scss/pages/market.scss:Styles/market.css --style compressed

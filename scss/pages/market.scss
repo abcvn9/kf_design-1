@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@import "../import";
+@import "home/banner";
+@import "home/sec-market";
+body {
+    background: rgba(247, 247, 247, 1);
+}
+.main {
+    padding: 0;
+}
+

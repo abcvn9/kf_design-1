@@ -5,8 +5,14 @@
 @import "components/checkbox";
 @import "components/minmax-width";
 @import "components/table";
+.text-gray{
+	color: #949494;
+}
 img{
 	max-width: 100%;
+}
+a{
+	color: #333;
 }
 ul{
 	list-style: none;

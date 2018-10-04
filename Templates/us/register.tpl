@@ -192,7 +192,7 @@
         errorMsg['xUsernameExist'] ='<div class="invalid-feedback" style="display: inline-block;">This username already exists. Please try with other usename.</div>';
         errorMsg['xName'] = '<div class="invalid-feedback" style="display: inline-block;">First name and last name must be in lowercase [a-z]<br>Ex: NUYEN VAN A</div>';
         errorMsg['xPassword'] = '<div class="invalid-feedback" style="display: inline-block;">Password must contain at least 8 characters<br> Ex: kfchange123@</div>';
-        errorMsg['xPasswordConfirm'] = '<div class="invalid-feedback" style="display: inline-block;">Password does not match the confirm passwordp</div>';
+        errorMsg['xPasswordConfirm'] = '<div class="invalid-feedback" style="display: inline-block;">Password does not match the confirm password</div>';
         errorMsg['xPhone'] = '<div class="invalid-feedback" style="display: inline-block;">Phone number must contain only digits 1 to 0 (greater than 9 and less than 11)<br>Ex: 09159555555 - 01237375555</div>';
         errorMsg['xEmail'] = '<div class="invalid-feedback" style="display: inline-block;">Ex: a@company.com, abc@gamil.com</div>';
         errorMsg['xCaptcha'] = '<div class="invalid-feedback" style="display: inline-block;">Captcha was not correct</div>';
