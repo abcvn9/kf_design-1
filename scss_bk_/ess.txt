@@ -1,0 +1,13 @@
+sass --watch scss/bootstrap.scss:template/default/css/bootstrap.css --style compressed
+
+
+sass --watch scss/common.scss:template/default/css/common.css --style compressed
+
+sass --watch scss/pages/index.scss:template/default/css/index.css --style compressed
+
+sass --watch scss/pages/login.scss:template/default/css/login.css --style compressed
+
+sass --watch scss/pages/register.scss:template/default/css/register.css --style compressed
+
+
+sass --watch scss/pages/market.scss:template/default/css/market.css --style compressed

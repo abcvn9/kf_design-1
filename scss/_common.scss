@@ -1,0 +1,429 @@
+body{
+  background-color:#f2f2f2;
+  font-family: TT Commons,Arial,Helvetica,sans-serif;
+
+  font-size: 1.0625rem;
+
+  color: #697a89;
+
+  font-size: 0.875rem;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+    color: #022144;
+
+}
+
+h1{
+  font-weight: 600;
+  font-size: 4rem;
+  letter-spacing: -.25px;
+  line-height: 1.125;
+  color: #022144;
+  margin-bottom: 20px;
+}
+img{
+	max-width: 100%;
+}
+.sub{
+  font-weight: 400;
+  letter-spacing: -.5px;
+  line-height: 1.25;
+  color: #697a89;
+}
+
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.main_content{
+  background: #FFF;
+  background-image: url(images/background.svg);
+  background-size: cover;
+  
+}
+#menuContainer{
+  z-index: 999999;
+  right: -550px;
+  position: absolute;
+  top:0;
+
+}
+#menuContainer .app-control{
+  background-color: #2da0d2;
+  background-size: 20px;
+  bottom: 70%;
+  color: #fff !important;
+  
+  height: 43px;
+  line-height: 32px;
+  outline: none;
+  padding: 3px 35px;
+  margin-top:40px;
+  
+  left: -75px;
+  text-align: center;
+  text-decoration: none;
+  transform: rotate(90deg);
+  
+  border-radius: 0 0 5px 5px;
+  position: absolute;
+}
+// .container {
+//     width: 100%;
+//     min-width: 1170px;
+//     max-width: 1500px;
+// }
+header{
+  background-color:#fff; 
+}
+
+.bg-primary{
+  background-color:rgb(9, 54, 135) !important;
+}
+.bg-gray{
+  background-color: rgb(248, 248, 248);
+}
+.nav a.nav-item.active{
+  border-radius: 0;
+  background-color: rgb(248, 248, 248);
+  font-weight: bold;
+  border-bottom: 0;
+  color:rgb(9, 54, 135);
+}
+.controller .tab-content{
+  background-color: rgb(248, 248, 248);
+}
+
+.slider{
+  padding: 50px 0px;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: -15px;
+}
+#timewapper{
+ width: 620px;
+  margin: auto;
+   margin-top: 50px;
+  white-space: nowrap;
+}
+.flip-clock-wrapper{
+  margin:0 !important; 
+  color: #FFF;
+}
+.flip-clock-label, .flip-clock-dot.top{
+  color: #FFF !important; 
+}
+
+.logoform{
+  position: absolute;
+  margin-top: -55px;
+}
+#features .card{
+  border:0px;
+  min-height: 300px;
+  margin-bottom: 30px;
+  
+}
+.shadown-box{
+  box-shadow: 2px 2px 4px #dee1e7;
+  padding: 10px;
+  background-color:#FFF; 
+}
+
+.alert{
+  border:0;
+  border-radius:0;
+}
+
+
+.bd-sidebar {
+     -ms-flex: 0 1 320px;
+    flex: 0 1 320px;
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 4rem;
+
+    z-index: 1000;
+    height: calc(100vh - 4rem);
+    width: 250px;
+}
+.bd-content {
+
+    -ms-flex-order: 1;
+    order: 1;
+
+}
+
+.exchange-sidebar {
+     -ms-flex: 0 1 320px;
+    flex: 0 1 320px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 4rem;
+    z-index: 1000;
+    height: calc(100vh - 4rem);
+    
+}
+
+.exchange-sidebar-2 {
+     height: 460px;
+    
+}
+.chatbox{
+  height: 775px;
+}
+
+.clear-margin{
+  margin-left:-10px;
+  margin-right: -10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.controller .tab-content{
+  padding: 15px;
+}
+
+#main_chart > div > label:first-child, #main_chart > div > select{
+  display: none;
+}
+
+.toolbar .btn{
+  background: none;
+  border-radius: 0;
+}
+
+.toolbar .btn:active{
+  box-shadow: none;
+}
+.price-task, .btn-marker{
+  line-height: 40px;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.user-menu li{
+  line-height: 40px;
+  border-bottom: 1px solid #ddd;
+  text-align: right;
+}
+.user-menu li:last-child{
+  border-bottom: 0px;
+}
+.user-menu .fas{
+  border-left:1px solid #ddd;
+  padding-left: 10px;
+  width: 25px;
+  margin-left: 10px;
+}
+
+.fa-icon{
+  color: rgb(9, 54, 135) !important;
+  border-right : 1px solid #ddd;
+  padding-right: 10px;
+}
+
+.alert-layout{
+  position: fixed;
+  top:0;
+  z-index: 9999999;
+  max-width: 50%;
+  right: 0;
+}
+
+.nav-balancer{
+  color: #FFF;
+  font-size: 11px;
+  text-align: right;
+  border-right: 1px dotted #FFF;
+  padding-right: 15px;
+  margin-right: 15px;
+  
+}
+
+.btn-coind{
+  border-radius:0px;
+}
+.CoindGird{
+  border: 0px solid #ddd;
+  overflow-y: auto;
+  min-height: 350px;
+}
+#coinValible >div{
+  
+  border-bottom: 1px solid #ddd;
+  color: rgb(9, 54, 135);
+  white-space: nowrap;
+}
+#coinValible >div a{
+  color: rgb(9, 54, 135);
+}
+#coinValible > div:hover{
+  
+  background-color: #f6f6f6;
+
+}
+
+#coinValible > div:hover a{
+  color: green;
+  text-decoration: none;
+  
+}
+
+#coinValible a span{
+  font-size: 10px;
+}
+.fa-red{
+  color: red;
+}
+.cell{
+  display: block;
+  position: relative;
+  overflow: hidden;
+  line-height: 40px;
+  height: 40px;
+  margin-bottom: 1px;
+  border-bottom: 1px dotted #ddd;
+}
+.cell:hover{
+  background-color: #f6f6f6;
+}
+
+.cell dd div{
+  display: inline-block;
+  width: 33%;
+  z-index: 3;
+  float: left;
+
+}
+.cell dd div.askAmount{
+  padding-left: 15px;
+}
+.cell dd div:first-child{
+  width: 34%;
+  padding-left: 10px;
+}
+
+.cell dd div:last-child{
+  text-align: right;
+  padding-right: 10px;
+}
+dd.showData{
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  left: 0;
+}
+dd.oscbtc{
+  position: absolute;
+  background-color: rgba(30,170,125,.3);
+  height: 100%;
+  right: 0;
+  z-index: 1;
+}
+
+dd.oscbtc2{
+  position: absolute;
+  background-color: rgba(223,78,79,.3);
+  height: 100%;
+  right: 0;
+  z-index: 1;
+}
+
+.sell-task.asks{
+  position: relative;
+}
+.sell-task.asks .dataList{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.history-task{
+  height: 350px;
+  overflow: hidden;
+}
+.FlexCoid div.cfx{
+  display: inline-block;
+}
+
+
+
+.ask-color, .asks{
+  
+  color: rgba(223,78,79,1);
+}
+.bid-color, .bids{
+  color: rgba(30,170,125,1);
+}
+
+#chatbox{
+  position: fixed;
+  right: 0;
+  width: 65px;
+  background-color: red;
+  height: 50px;
+  bottom:0px;
+}
+#chatbox.open{
+  width: 250px;
+}
+#chatbox .status{
+  width: 100%;
+  height: 50px;
+  background-color: rgba(30,170,125,1);
+  text-align: center;
+  padding-top: 10px;
+  color: #FFF;
+}
+
+.layerSocket{
+  position: relative;
+}
+.waitconnect{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.1);
+  top:0;
+  line-height: 100%;
+  text-align: center;
+}
+.text-green{
+  color: green;
+}
+.text-red{
+  color: red;
+}
+
+.run-task{
+  overflow-x: scroll;
+  max-height: 425px;
+  height: 425px;
+}
+
+.title-box{
+  line-height: 30px;
+  border-bottom: 1px solid #ddd;
+}
+.title-box div:first-child{
+  padding-left: 25px;
+}
+
+.title-box div:last-child{
+  padding-right: 25px;
+}
+.task{
+  overflow-x: hidden;
+}

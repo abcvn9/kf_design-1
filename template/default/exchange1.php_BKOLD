@@ -1,0 +1,548 @@
+<script type="text/javascript">
+	//var sock = new WebSocket('ws://127.0.0.1:8008');
+</script>
+
+
+<script type="text/javascript" src="https://kfchange.com/charting_library/charting_library.min.js"></script>
+<script type="text/javascript" src="https://kfchange.com/charting_library/udf/dist/polyfills.js"></script>
+<script type="text/javascript" src="https://kfchange.com/charting_library/udf/dist/bundle.js"></script>
+
+<!--<script src="<?php /*echo base_url("tchart/bower_components/d3/d3.js");*/?>"></script>
+<script src="<?php /*echo base_url("tchart/bower_components/techan/dist/techan.js");*/?>"></script>
+<script src="<?php /*echo base_url("tchart/graphic.js");*/?>"></script>
+<link rel="stylesheet" type="text/css" href="<?php /*echo base_url("tchart/style.css");*/?>">-->
+
+<div class="container">
+	
+<div class="row">
+	<div class="col-lg-8 col-sm-7">
+
+		<div class="shadown-box alert alert-dark alert-dismissible fade show" role="alert">
+		  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+		  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		    <span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+
+		<div class="shadown-box">
+			<div class="border-bottom clear-margin">
+				<div class="float-left"><img src="<?php echo $info->icon;?>" style="height:45px; width: 45px;"></div>
+				<div style="margin-left: 60px;">
+					<?php echo $pair;?> / <?php echo $base;?><br>
+					<?php echo $info->name;?>
+				</div>
+			</div>
+			<div class="row" style="padding-top: 10px;padding-bottom: 10px;">
+				<div class="col-6">
+					<h3 class="text-primary" id="lastprice" style="margin-bottom:2px; ">0.00000000</h3>
+
+					24h Change : <span id="change24"></span>
+
+				</div>
+
+				<div class="col-6">
+					<div class="row">
+						<div class="col-lg-6 border-bottom" style="padding-bottom: 10px;padding-left: 0;">High <span class="float-right" id="high24"></span></div>
+						<div class="col-lg-6 border-bottom" style="padding-bottom: 10px;">Volume <span class="float-right" id="volume24"></span></div>
+
+						<div class="col-lg-6" style="padding-left: 0;padding-bottom: 10px;">Low <span class="float-right" id="low24"></span></div>
+						<div class="col-lg-6" style="padding-bottom: 10px;">Volume <span class="float-right" id="volume24base"></span></div>
+
+					</div>
+
+
+				</div>
+
+			</div>
+
+			<div class="border-top bg-light clear-margin" style="line-height: 40px;">
+				<strong>Bittrex</strong> : 0.0000000 - <strong>Poloniex</strong> : 0.0000000
+			</div>
+
+			<div class="border-bottom border-top bg-light clear-margin">
+				<div class="row">
+					<div class="col-lg-6 col-md-12">
+						<div class="btn-group toolbar" role="group">
+						    <button id="btnGroupDrop1" type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						      Candlesticks
+						    </button>
+						    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+						      <a class="dropdown-item" href="#">Candlesticks</a>
+						      <a class="dropdown-item" href="#">Tradingview</a>
+						    </div>
+
+						</div>
+
+					</div>
+					<div class="col-lg-6 col-md-12 text-right">
+						<div class="btn-group btn-group-sm toolbar" role="group" aria-label="Button group with nested dropdown">
+
+							<div class="btn-group" role="group">
+							    <button id="btnGroupDrop1" type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							      Time Line
+							    </button>
+							    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">
+							      <a class="dropdown-item" href="#">1m</a>
+							      <a class="dropdown-item" href="#">5m</a>
+							      <a class="dropdown-item" href="#">15m</a>
+							      <a class="dropdown-item" href="#">30m</a>
+							      <a class="dropdown-item" href="#">45m</a>
+							      <a class="dropdown-item" href="#">1h</a>
+							      <a class="dropdown-item" href="#">2h</a>
+							      <a class="dropdown-item" href="#">3h</a>
+							      <a class="dropdown-item" href="#">4h</a>
+							      <a class="dropdown-item" href="#">1 day</a>
+							      <a class="dropdown-item" href="#">1 week</a>
+							      <a class="dropdown-item" href="#">1 month</a>
+							    </div>
+							</div>
+
+							<div class="btn-group" role="group">
+							    <button id="btnGroupDrop1" type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							      Tools
+							    </button>
+							    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">
+							      <a class="dropdown-item" href="#">SMA</a>
+							      <a class="dropdown-item" href="#">EMA</a>
+							      <a class="dropdown-item" href="#">MA</a>
+							      <a class="dropdown-item" href="#">Ichimoku</a>
+							      <a class="dropdown-item" href="#">RSI</a>
+							      <a class="dropdown-item" href="#">MACD</a>
+							    </div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+				<div id="tv_chart_container" style="margin: 0px; padding-top: 8px;"></div>
+
+				<script type="text/javascript">
+					function getParameterByName(name) {
+						name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+						var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+							results = regex.exec(location.search);
+						return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+					}
+					TradingView.onready(function()
+					{
+						var widget = window.tvWidget = new TradingView.widget({
+							debug: true, // uncomment this line to see Library errors and warnings in the console
+							width: $("#main_chart").width(),
+							height: 385,
+							fullscreen: false,
+
+							symbol: '<?php echo $base.$pair;?>',
+							interval: '120',
+							container_id: "tv_chart_container",
+							//	BEWARE: no trailing slash is expected in feed URL
+							datafeed: new Datafeeds.UDFCompatibleDatafeed("https://kfchange.com/datafeeds/", 10000), // 5s
+							library_path: "https://kfchange.com/charting_library/",
+							locale: getParameterByName('lang') || "en",
+							//enabled_features: ["move_logo_to_main_pane", "study_templates"],
+							//disabled_features: ["use_localstorage_for_settings",/*"header_widget",*/"left_toolbar"],
+							//enabled_features: ["study_templates"],
+							drawings_access: {
+								type: 'black',
+								tools: [ { name: "Regression Trend" } ]
+							},
+							theme: getParameterByName('theme'),
+							disabled_features: ["save_chart_properties_to_local_storage", /*"header_widget", */ "use_localstorage_for_settings", "study_templates"],
+							//enabled_features: [/*"move_logo_to_main_pane", */"study_templates"],
+							overrides: {
+								"mainSeriesProperties.style": 0,
+								"symbolWatermarkProperties.color" : "#944",
+								"volumePaneSize": "tiny"
+							},
+							client_id: 'kfchange.com',
+							studies: ["BB@tv-basicstudies", "ConnorsRSI"],
+							/*studies_overrides: {
+								"volume.volume.color.0": "#00FFFF",
+								"volume.volume.color.1": "#0000FF",
+								"volume.volume.transparency": 70,
+								"volume.volume ma.color": "#FF0000",
+								"volume.volume ma.transparency": 30,
+								"volume.volume ma.linewidth": 5,
+								"volume.show ma": true,
+								"bollinger bands.median.color": "#33FF88",
+								"bollinger bands.upper.linewidth": 3
+							},*/
+							favorites: {
+								intervals: ["15", "120", "1D"]
+							},
+							time_frames: [
+								{ text: "1m", resolution: "60" },
+								{ text: "1w", resolution: "30" },
+								{ text: "7d", resolution: "30" },
+								{ text: "5d", resolution: "10" },
+								{ text: "3d", resolution: "10" },
+								{ text: "2d", resolution: "5" },
+								{ text: "1d", resolution: "5" }
+							],
+						});
+
+						widget.onChartReady(function() {
+							/*widget.chart().createStudy("Bollinger Bands", false, false, [
+									10 + parseInt(Math.random() * 10),
+									3 + parseInt(Math.random() * 3)
+								], function (guid) {
+									console.log(guid);
+								}
+							);
+
+							widget.chart().createStudy('Stochastic', false, false, [14, 3, 1], null, {
+								"%d.color" : "#000000", "%k.color" : "#00FF00"
+							});
+
+							widget.chart().createStudy("Moving Average", false, false, [
+									10 + parseInt(Math.random() * 10)
+								], function (guid) {
+									console.log(guid);
+								}
+							);
+
+							$('#2hours').on("click", function () {
+								console.log("Dsad");
+							})*/
+						});
+					});
+				</script>
+
+			<!--//-->
+			<!--<div class="chart layerSocket" id="main_chart" style="display: none;">Loadding chart..</div>-->
+			<!--<script type="text/javascript">
+	        $("#main_chart").kline({
+	                width:$("#main_chart").width(),
+	             url:"<?php /*echo base_url("tchart/kline.json");*/?>",
+	        });
+	        </script>-->
+		</div> <!--// Shadown box //-->
+		<br>
+		<div class="">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="task border shadown-box" style="padding: 0;">
+						<div class="sell-task asks layerSocket">
+							<div class="dataList"></div>
+						</div>
+						<div class="price-task text-center bg-light"><span class="lastPrices">7500</span> <span style="font-size: 12px;">7500 <?php echo $base;?></span></div>
+						<div class="buy-task bids layerSocket">
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-8" style="padding-left: 5px;">
+					<div class="controller">
+						<nav>
+						  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+						  	
+						  	<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Limit</a>
+						    <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Market</a>
+						    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Stop limit</a>
+						    
+						  </div>
+						</nav>
+						<div class="tab-content border border-top-0" id="nav-tabContent">
+						  	
+						  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+						  		<?php include __DIR__."/forms/limit.php";?>
+						  </div>
+						</div>
+					</div>
+					<br>
+					<div class="border shadown-box" style="padding:30px; min-height: 320px;">
+						<h5>Depth</h5>
+						<div id="depthchart" style="height: 200px;"></div>
+					</div>
+					<br>
+					<div id="history" class="shadown-box">
+						<h5>Trade History</h5>
+						<div class="history-task align-items-end history">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!--// End clol-9 -->
+	<div class="col-lg-4 col-sm-5">
+		<div class="shadown-box exchange-sidebar">
+
+			
+			<div class="row">
+				<div class="col-lg-2"><button class="btn btn-primary" type="button" onClick="loadCoid('favorites');"><i class="fas fa-star"></i></button></div>
+				<div class="col-lg-10">
+					<div class="input-group mb-3">
+					  <input type="text" class="form-control" placeholder="Keyword">
+					  <div class="input-group-append">
+					    <button class="btn btn-info" type="button"><i class="fas fa-search"></i></button>
+					  </div>
+					</div>
+				</div>
+			</div>
+			  	
+			
+			<?php 
+			foreach ($data as $key => $value) {
+				?>
+				<button type="button" onClick="loadCoid('<?php echo $value;?>');" class="btn btn-coind btn-sm btn-<?php echo ($value == $base ? "" :"outline-");?>info"><?php echo $value;?></button>
+				<?php
+			}
+			//include __DIR__."/forms/listcoind.php";?>
+			<div class="row border-top border-bottom clear-margin" style="margin-top: 10px; line-height: 30px;">
+				<div class="col-lg-6">Symbol</div>
+				<div class="col-lg-3">Prices</div>
+				<div class="col-lg-3 text-right">Volume</div>
+			</div>
+			<div class="CoindGird clear-margin" id="CoindGird"></div>
+		</div>
+	</div><!--// col-3 -->
+</div>
+
+
+
+<div class="row">
+	<div class="col-lg-8">
+			<br>
+			<div id="mytask">
+			<h5>Open Order</h5>
+			<div class="run-task shadown-box">
+				<table class="table">
+					<thead>
+						<th>Date</th>
+						<th>Pair</th>
+						<th>Type</th>
+						<th>Side</th>
+						<th>Price</th>
+						<th>Amount</th>
+						<th>Filled%</th>
+						<th>Total</th>
+						<th>Trigger Conditions</th>
+						<th class="text-right"><a href="#" class="btn btn-outline-info btn-sm">Cancel All</a></th>
+					</thead>
+					<tbody  class="userTask">
+						
+					</tbody>
+				</table>
+			</div>
+			<!--//
+			<br>
+			<h5>My 24h Order History</h5>
+			<div class="shadown-box">
+				<table class="table">
+					<thead>
+						<th>Date</th>
+						<th>Pair</th>
+						<th>Type</th>
+						<th>Side</th>
+						<th>Price</th>
+						<th>Amount</th>
+						<th>Filled%</th>
+						<th>Total</th>
+						<th>Trigger Conditions</th>
+						<th class="text-right">Status</th>
+					</thead>
+					<tbody>
+						
+					</tbody>
+				</table>
+			</div>
+			//-->
+			</div>
+
+			
+	</div><!--//End col 8 -->
+	<div class="col-lg-4">
+		<br>
+		<div class="bg-primary" style="text-align: center;  height: 200px;  color: #FFF;"><br><h1>ADS</h1> Add you coin Here</div>
+		<br>
+		<div class="bg-info" style="text-align: center;  height: 200px;  color: #FFF;"><br><h1>ADS</h1>Add you coin Here</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var history = $("#history").height();
+		var parenHeight = $(".controller").parent().height();
+		var priceTask = $(".price-task").outerHeight();
+		//$("#coinValible").height($("#main_chart").height());
+		//$(".task").height(parenHeight);
+		$(".sell-task, .buy-task").height(550);
+		
+		$(".sell-task").animate({scrollTop: $(".sell-task").get(0).scrollHeight}, 500);
+		getDataJson();
+		
+		loadCoid("<?php echo $base;?>");
+		
+	});
+	
+	var loadCoid = function(base){
+		$("#CoindGird").load("/coind.html?base="+base+"&pair=<?php echo $pair;?>");
+	}
+	var getDataJson = function(){
+
+			$.getJSON("/api/marketstatus/<?php echo $base;?><?php echo $pair;?>", function(data){
+				makeBoard(data);
+
+			});
+
+		}
+	
+
+	var makeBoard = function(data){
+				$("#volume24").text(parseFloat(data.sumary.volume).toFixed(2) + " <?php echo $pair;?>");
+				$("#volume24base").text((data.sumary.volume * data.sumary.last).toFixed(4) + " <?php echo $base;?>");
+				$("#lastprice, .lastPrices").text(data.sumary.last);
+				$("#low24").text(data.sumary.low);
+				$("#high24").text(data.sumary.high);
+				var c24 = "0.00%";
+				var contracts_change = parseFloat(((parseFloat(data.sumary.last) - parseFloat(data.sumary.low)) / parseFloat(data.sumary.low))*100).toFixed(2);
+
+				if(parseFloat(data.sumary.last) > parseFloat(data.sumary.low)){
+					
+					c24 = "<span class='text-green'>+"+contracts_change+"%</span>";
+				}
+
+				if(parseFloat(data.sumary.last) < parseFloat(data.sumary.low)){
+					c24 = "<span class='text-red'>-"+contracts_change+"%</span>";
+				}
+
+
+				$("#change24").html(c24);
+
+				document.title = (parseFloat(data.sumary.last) > 0 ? parseFloat(data.sumary.last) +" - <?php echo $base;?> <?php echo $pair;?> - " : "")+"KFChange";
+
+				/*
+				List Bids
+				*/
+				var bids_html = '';
+				$.each(data.order.bids, function(index, value){
+					var dot = 100 - 100/(parseFloat(value[0] * value[1]).toFixed(4));
+					//dot = (dot > 100 ? 100 : dot);
+					bids_html += '<div class="cell"><dd style="width:'+dot+'%;" class="oscbtc"></dd><dd class="showData"><div class="askPrices">'+value[0]+'</div><div class="askAmount">'+value[1]+'</div><div class="text-right askTotal">'+parseFloat(value[0] * value[1]).toFixed(4)+'</div></dd></div>';
+				});
+				
+				$(".bids").html(bids_html);
+
+
+				/*
+				List asks
+				*/
+				var asks_html = '';
+
+				///if(data.order.asks>0){
+					$.each(data.order.asks.reverse(), function(index, value){
+
+						var dot = 100 - 100/(parseFloat(value[0] * value[1]).toFixed(4));
+						//dot = (dot > 100 ? 100 : dot);
+						asks_html += '<div class="cell"><dd style="width:'+dot+'%;" class="oscbtc2"></dd><dd class="showData"><div class="askPrices">'+value[0]+'</div><div class="askAmount">'+value[1]+'</div><div class="text-right askTotal">'+parseFloat(value[0] * value[1]).toFixed(4)+'</div></dd></div>';
+
+					});
+				//}
+				$(".asks .dataList").html(asks_html);
+
+
+				/*
+				List History
+				*/
+				var history_html = '<table class="table">';
+				history_html += '<thead><th>Type</th><th>Amount</th><th>Price</th><th class="text-right">Total</th></thead>';
+				history_html += '<tbody>';
+				$.each(data.history, function(index, value){
+					history_html += '<tr class="'+(value.type == "sell" ? "ask-color" : "bid-color")+'"><td>'+value.type+'</td><td>'+value.amount+'</td><td>'+value.price+'</td><td class="text-right">'+parseFloat(value.amount * value.price).toFixed(4)+'</td></tr>';
+				});
+				history_html += '</tbody>';
+				history_html += '</table>';
+				
+				$(".history").html(history_html);
+
+
+				/*
+				Call User Task
+				*/
+
+				var mytask_html = "";
+				$.each(data.users_history, function(index, value){
+					mytask_html += '<tr id="orderID'+value.id+'">';
+					mytask_html += '		<td></td>';
+					mytask_html += '		<td>'+value.market+'</td>';
+					mytask_html += '		<td></td>';
+					mytask_html += '		<td>'+(value.side == 1 ? "Sell" : "Buy")+'</td>';
+					mytask_html += '		<td>'+value.price+'</td>';
+					mytask_html += '		<td>'+value.amount+'</td>';
+					mytask_html += '		<td>'+value.left+'</td>';
+					mytask_html += '		<td>'+parseFloat(value.price * value.amount).toFixed(4)+'</td>';
+					mytask_html += '		<td></td>';
+					mytask_html += '		<td class="text-right"><a class="btn btn-sm btn-outline-info btnCancel" onClick="cancelOrder('+value.id+',\''+value.market+'\');">Cancel</a></td>';
+					mytask_html += '	</tr>'
+				});
+				$(".userTask").html(mytask_html);
+				//alert(data);
+
+				/*
+				Balancer
+				*/
+				$("#balancer_base, #balancerbase").html(parseFloat(data.balancer.base.available).toFixed(4));
+				$("#balancer_pair, #balancerpair").html(parseFloat(data.balancer.pair.available).toFixed(4));
+
+
+
+				$(".askPrices").on("click",function(){
+					var prices = $(this).text();
+					$('input[name="prices"]').val(prices);
+				});
+
+				$(".askAmount").on("click",function(){
+					var amount = $(this).text();
+					$('input[name="amount"]').val(amount);
+				});
+				$(".askTotal").on("click",function(){
+					var prices = $(this).parent().parent().find(".askPrices").text();
+					$('input[name="prices"]').val(prices);
+
+					var amount = $(this).parent().parent().find(".askAmount").text();
+					$('input[name="amount"]').val(amount);
+
+				});
+	}
+
+	var addFavorites = function (base, symbol){
+
+		$.ajax({
+		    type: "GET",
+		    url: "<?php echo store_url("account/favorites");?>",
+		    data : {base : base, pair : symbol},
+		    success: function(){
+		    	
+		    }
+		  });
+
+	};
+
+	var cancelOrder = function(orderid, symbol){
+		
+		$.ajax({
+		    type: "GET",
+		    url: "<?php echo store_url("account/cancelorder");?>/"+orderid+"/"+symbol,
+		    
+		    success: function(){
+		    	$("tr#orderID"+orderid).remove();
+		    }
+		  });
+	};
+</script>
+
+
+
+
+<style type="text/css">
+	.highcharts-input-group, text.highcharts-credits{
+		display: none;
+	}
+	.highcharts-scrollbar-thumb{
+		display: none;
+	}
+</style>

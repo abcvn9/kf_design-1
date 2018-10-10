@@ -1,0 +1,36 @@
+.page-title {
+    margin-bottom: 3rem;
+}
+
+h2,.h2 {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 767px) {
+    .page-title {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+    h2,.h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-title {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    h2,.h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 567px) {
+    .page-title {
+        font-size: 1.1rem;
+    }
+    h2,.h2 {
+        font-size: 1rem;
+    }
+}

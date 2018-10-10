@@ -1,0 +1,18 @@
+$rem-base-font: 16px !default;
+$line-height: 24px;
+@mixin font-rem($font-size, $line-height: 0) {
+  font-size: $font-size;
+  font-size: ($font-size / $rem-base-font) * 1rem;
+  @if ($line-height > 0) {
+    line-height: $line-height;
+    line-height: ($line-height / $rem-base-font) * 1rem;
+  }
+}
+
+$starNumber:8;
+$endNumber:32;
+@for $i from $starNumber through $endNumber{
+	.fs-#{$i+8}{
+		font-size: (($i+8)/16)* 1rem;
+	}
+}

@@ -1,35 +1,38 @@
 .nav-tabs {
-    position: relative;
-	border-color: #f0f0f0;
-    >li {
-        overflow: hidden;
-        border-width: 1px 1px 0 1px;
-        border-style: solid;
-        border-color: #f0f0f0;
-        margin: 0 -1px -1px 0;
+ //    position: relative;
+	// border-color: #f0f0f0;
+ //    >li {
+ //        overflow: hidden;
+ //        border-width: 1px 1px 0 1px;
+ //        border-style: solid;
+ //        border-color: #f0f0f0;
+ //        margin: 0 -1px -1px 0;
 
-        >a {
-            color: rgb(102, 102, 102);
-            font-weight: 700;
-            padding: 0.5rem 0.625rem;
-            display: block;
+ //        >a {
+ //            color: rgb(102, 102, 102);
+ //            font-weight: 700;
+ //            padding: 0.5rem 0.625rem;
+ //            display: block;
 
-            &:hover {
-                text-decoration: none;
-            }
+ //            &:hover {
+ //                text-decoration: none;
+ //            }
 
-            &.active {
-                background: #fff;
-            }
-        }
-    }
+ //            &.active {
+ //                background: #fff;
+ //            }
+ //        }
+ //    }
 }
 
 .tab-content {
     position: relative;
+    background: #fff;
+    padding: 1rem;
+
 }
 
-.sec-market {
+.marker{
     padding: 2.5rem 0;
 
     .table {

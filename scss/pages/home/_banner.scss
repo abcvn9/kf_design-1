@@ -1,24 +1,8 @@
 .banner {
-    background: $primary url(../Images/bg_banner.jpg) no-repeat center center;
+    background: url(../default/images/bg_banner.jpg) no-repeat center center;
     background-size: cover;
-    width: 100%;
     color: #fff;
     padding: 3rem 0;
-    .banner-top{
-        text-align: center;
-        margin-bottom: 1rem;
-        h1{
-            font-weight: 700;
-        }
-        a{
-            color: $warning;
-            text-decoration: none;
-            @incude transition(0.4s all ease);
-            &:hover{
-                opacity: 0.7;
-            }
-        }
-    }
     .banner-list{
         display: flex;
         flex-wrap: wrap;
@@ -31,4 +15,13 @@
             padding-right: 0.625rem;
         }
     }
+    // @media (min-width: 1170px) {
+    // width: 100vw;
+    //   position: relative;
+    //   left: 50%;
+    //   right: 50%;
+    //   margin-left: -50vw;
+    //   margin-right: -50vw;
+    // }
 }
+

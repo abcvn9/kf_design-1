@@ -1,0 +1,37 @@
+.header-middle {
+    border-bottom: 1px solid $gray-200;
+    background: #fff;
+
+    .header-language {
+        .btn {
+            padding: 0.25rem 0.625rem;
+            background: #fff;
+            color: #333;
+            border: 1px solid #f2f2f2;
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        .dropdown-toggle::after {
+            vertical-align: middle;
+        }
+
+        .dropdown-menu.show {
+            display: block;
+            min-width: 55px;
+            padding: 0.25rem;
+            text-align: center;
+            border-radius: 0;
+            margin-top: -0.1rem;
+            background: #fff;
+            border-color: #f2f2f2;
+            -webkit-border-bottom-right-radius: 2px;
+            -webkit-border-bottom-left-radius: 2px;
+            -moz-border-radius-bottomright: 2px;
+            -moz-border-radius-bottomleft: 2px;
+            border-bottom-right-radius: 2px;
+            border-bottom-left-radius: 2px;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+$starNumber:5;
+$endNumber:50;
+@for $i from $starNumber through $endNumber{
+    .min-w-#{$i*5}{
+        min-width: (($i*5)/16)*1rem!important;
+    }
+    .max-w-#{$i*5}{
+        max-width: (($i*5)/16)*1rem!important;
+    }
+}
