@@ -11,10 +11,10 @@
             var totalHeight = (headerHeight+footerHeight+mainHeight);
             var mainContentHeight = 'auto';
             if(totalHeight>winHeight){
-                $('.main').removeAttr('style').removeClass('d-flex');
+                $('.main').removeAttr('style');
             }else{
                 mainContentHeight = (winHeight-(headerHeight+footerHeight));
-                $('.main').css({'height':mainContentHeight+'px'}).addClass('d-flex');
+                $('.main').css({'height':mainContentHeight+'px'});
             }
 
         }

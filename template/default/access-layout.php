@@ -2,6 +2,7 @@
 <html lang="en-US">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
   <title>Smart Exchange</title>
   	<meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="<?php echo template_url("browserconfig.xml");?>">
@@ -37,10 +38,11 @@
   
 </head>
 <body>
-
-	<main ruller="main" class="container-fluid">
+<div class="wrapper">
+	<main ruller="main" class="main container-fluid">
 		<?php print_r($content);?>
 	</main>
+</div>
 	<script type="text/javascript">
    $(document).ready(function(){
       $("main").heihgt($(window).height());
