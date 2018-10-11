@@ -36,6 +36,7 @@
             <a href="/register.html" class="btn btn-block btn-primary fs-16 text-capitalize btn-register">Đăng ký</a>
         </div>
 	</div>
+	<div class="mt-3 text-center"><a class="btn bg-transparent" href="/"><i class="fas fa-home"></i> Back to home</a></div>
 </div>
 <script type="text/javascript">
 	// $("main").height($(window).height());

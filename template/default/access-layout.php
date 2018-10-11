@@ -35,6 +35,8 @@
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo template_url("apps.css");?>">
   <script type="text/javascript" language="javascript" charset="utf-8" src="<?php echo template_url("apps.js");?>"></script>
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo resource_url("themify/themify-icons.css");?>">
+    <link rel="stylesheet" href="<?php echo resource_url("icons/css/all.css");?>" crossorigin="anonymous">
+
   
 </head>
 <body>
